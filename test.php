@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>welcome master edit dari main</h1>
+    <h1>welcome master edit dari main dari git</h1>
 </body>
 
 </html>
