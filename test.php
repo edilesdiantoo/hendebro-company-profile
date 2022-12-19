@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>welcome hahaa master</h1>
+    <h1>welcome master</h1>
 </body>
 
 </html>
