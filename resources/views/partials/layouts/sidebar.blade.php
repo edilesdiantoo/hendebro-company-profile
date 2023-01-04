@@ -65,14 +65,14 @@
         </li>
 
         <!-- Layouts -->
-        <li class="menu-item">
+        <li class="menu-item {{ Request::is('master/user*') ? 'open' : '' }}">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
                 <div data-i18n="Layouts">Master</div>
             </a>
 
             <ul class="menu-sub">
-                <li class="menu-item">
+                <li class="menu-item {{ Request::is('master/user*') ? 'active' : '' }}">
                     <a href="/master/user" class="menu-link">
                         <div data-i18n="Without menu">User</div>
                     </a>

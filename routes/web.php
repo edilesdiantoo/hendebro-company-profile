@@ -101,3 +101,11 @@ Route::resource('/dashboard/categories', AdminCategoryController::class)->except
 
 // Route::resource('/master/user', [MasterController::class, 'user'])->middleware('auth');
 Route::get('/master/user', [MasterController::class, 'user']);
+Route::get('/showUser', [MasterController::class, 'showUser']);
+Route::get('/tambahUser', [MasterController::class, 'tambahUser']);
+Route::get('/simpanUser', [MasterController::class, 'simpanUser']);
+Route::get('/show', [MasterController::class, 'show']);
+Route::get('/fetch_data', [MasterController::class, 'fetch_data']);
+Route::get('/editUser/{id}', [MasterController::class, 'editUser']);
+Route::get('/simpanEditUser/{id}', [MasterController::class, 'simpanEditUser']);
+Route::get('/deleteUser/{id}', [MasterController::class, 'deleteUser']);

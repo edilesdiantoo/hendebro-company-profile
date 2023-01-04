@@ -17,7 +17,7 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Title</th>
+                    <th scope="col">Title test</th>
                     <th scope="col">Category</th>
                     <th scope="col" class="text-center">Action</th>
                 </tr>
