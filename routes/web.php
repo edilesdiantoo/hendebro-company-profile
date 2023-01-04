@@ -10,6 +10,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginSampleController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardPostController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -83,6 +84,9 @@ Route::get('/categories', function () {
 // ini udah ada di model post
 
 //Login
+Route::get('/loginsample', [LoginSampleController::class, 'index'])->name('loginsample')->middleware('guest');
+Route::post('/loginsample', [LoginSampleController::class, 'authenticate']);
+
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
