@@ -5,18 +5,20 @@
             <th>Nama</th>
             <th>username</th>
             <th>Email</th>
+            <th>Level</th>
             <th>Action</th>
         </tr>
     </thead>
     <tbody>
-        @foreach ($getUser as $key => $users)
+        @foreach ($test_join as $key => $users)
             <tr>
                 <td>
-                    {{ $rank++ }}
+                    {{ $key + $test_join->firstItem() }}
                 </td>
                 <td>{{ $users->name }}</td>
                 <td>{{ $users->username }}</td>
                 <td>{{ $users->email }}</td>
+                <td>{{ $users->level_name }}</td>
                 <td>
                     <a href="#" onclick="editUser({{ $users->id }})">
                         <i class='bx bx-edit-alt'></i>
@@ -31,4 +33,4 @@
     </tbody>
 </table>
 <br>
-<div class="row">{!! @$getUser->render() !!}</div>
+<div class="row">{{ @$test_join->onEachSide(2)->links() }}</div>

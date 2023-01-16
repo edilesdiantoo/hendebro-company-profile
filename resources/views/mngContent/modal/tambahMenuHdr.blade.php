@@ -1,20 +1,20 @@
 <div class="row">
     <div class="col mb-3">
-        <label for="namaLenkap" class="form-label">Nama</label>
-        <input type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror"
-            placeholder="Nama Lengkap" />
-        @error('name')
+        <label for="hdr_name" class="form-label">Nama Menu Hdr</label>
+        <input type="text" name="hdr_name" id="hdr_name" class="form-control @error('hdr_name') is-invalid @enderror"
+            placeholder="Nama Menu Header" />
+        @error('hdr_name')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror
     </div>
 </div>
 <div class="row">
     <div class="col mb-3">
-        <label for="username" class="form-label">Username</label>
-        <input type="text" id="username" class="form-control" placeholder="Username" />
+        <label for="username" class="form-label">Title</label>
+        <input type="text" id="title" class="form-control" placeholder="Title" />
     </div>
 </div>
-<div class="row">
+{{-- <div class="row">
     <div class="col mb-3">
         <label for="username" class="form-label">Email</label>
         <input type="email" id="email" class="form-control" placeholder="Username" />
@@ -36,7 +36,7 @@
             @endforeach
         </select>
     </div>
-</div>
+</div> --}}
 
 {{-- <div class="row g-2">
     <div class="col mb-0">

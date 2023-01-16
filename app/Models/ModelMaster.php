@@ -11,14 +11,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class ModelMaster extends Model
 {
     use SoftDeletes;
+    use HasFactory;
 
-    protected $table = 'users';
-    protected $fillable = [
-        'name',
-        'username',
-        'email',
-        'password',
-    ];
+    protected $table = 'level_user';
 
-    protected $hidden;
+    protected $guarded = ['id'];
+
+    // public function level_user()
+    // {
+    //     return $this->hasMany(User::class);
+    // }
 }

@@ -10,6 +10,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\MNGContenController;
 use App\Http\Controllers\LoginSampleController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardPostController;
@@ -103,6 +104,8 @@ Route::resource('/dashboard/posts', DashboardPostController::class)->middleware(
 
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin'); // excep adalah kecuali. atau method yang tidak dilkukan
 
+// master
+
 // Route::resource('/master/user', [MasterController::class, 'user'])->middleware('auth');
 Route::get('/master/user', [MasterController::class, 'user']);
 Route::get('/showUser', [MasterController::class, 'showUser']);
@@ -113,3 +116,12 @@ Route::get('/fetch_data', [MasterController::class, 'fetch_data']);
 Route::get('/editUser/{id}', [MasterController::class, 'editUser']);
 Route::get('/simpanEditUser/{id}', [MasterController::class, 'simpanEditUser']);
 Route::get('/deleteUser/{id}', [MasterController::class, 'deleteUser']);
+Route::get('/getSearch/{id}', [MasterController::class, 'getSearch']);
+//management content
+Route::get('/MngConten/hdr', [MNGContenController::class, 'hdr']);
+Route::get('/showMenuHdr', [MNGContenController::class, 'showMenuHdr']);
+Route::get('/tambahMenuHdr', [MNGContenController::class, 'tambahMenuHdr']);
+Route::get('/simpanMenuHdr', [MNGContenController::class, 'simpanMenuHdr']);
+Route::get('/editMenuHdr/{id}', [MNGContenController::class, 'editMenuHdr']);
+Route::get('/simpanEditMenuHdr/{id}', [MNGContenController::class, 'simpanEditMenuHdr']);
+Route::get('/deleteMenuHdr/{id}', [MNGContenController::class, 'deleteMenuHdr']);

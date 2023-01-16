@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -35,15 +37,21 @@ class LoginController extends Controller
             $login_type => $request->input('login')
         ]);
 
+        $get_user = User::where($login_type, $request->input('login'))->first();
 
 
         if (Auth::attempt($request->only($login_type, 'password'))) {
             $request->session()->regenerate();
+            Session::put($login_type, $get_user->username);
+            Session::put('name', $get_user->name);
+            Session::put('id', $get_user->id);
+            Session::put('login', TRUE);
             return redirect()->intended('/dashboard');
         }
 
-        // dd('berhasil login');
-        // return back()->with('loginError', 'Login Failed!');
+        // // dd('berhasil login');
+        // // return back()->with('loginError', 'Login Failed!');
+
         return redirect()->back()
             ->withInput()
             ->withErrors([
