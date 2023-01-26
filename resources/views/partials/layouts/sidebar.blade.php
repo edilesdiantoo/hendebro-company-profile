@@ -65,7 +65,7 @@
         </li>
 
         <!-- Layouts -->
-        <li class="menu-item {{ Request::is('master/user*') ? 'active open' : '' }}">
+        <li class="menu-item {{ Request::is('master*') ? 'active open' : '' }}">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
                 <div data-i18n="Layouts">Master</div>
@@ -78,22 +78,34 @@
                     </a>
                 </li>
             </ul>
+            <ul class="menu-sub">
+                <li class="menu-item {{ Request::is('master/category*') ? 'active' : '' }}">
+                    <a href="/master/category" class="menu-link">
+                        <div data-i18n="Without menu">Category Product</div>
+                    </a>
+                </li>
+            </ul>
         </li>
-        <li class="menu-item {{ Request::is('MngConten/hdr*') ? 'active open' : '' }}">
+        <li class="menu-item {{ Request::is('MngContent*') ? 'active open' : '' }}">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
                 <div data-i18n="Layouts">MNG Content</div>
             </a>
 
             <ul class="menu-sub">
-                <li class="menu-item {{ Request::is('MngConten/hdr*') ? 'active' : '' }}">
-                    <a href="/MngConten/hdr" class="menu-link">
+                <li class="menu-item {{ Request::is('MngContent/hdr*') ? 'active' : '' }}">
+                    <a href="/MngContent/hdr" class="menu-link">
                         <div data-i18n="Without menu">Menu HDR</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
+                    <a href="#" class="menu-link">
                         <div data-i18n="Without navbar">Sub Menu</div>
+                    </a>
+                </li>
+                <li class="menu-item {{ Request::is('MngContent/blog*') ? 'active' : '' }}">
+                    <a href="/MngContent/blog" class="menu-link">
+                        <div data-i18n="Without navbar">Blog</div>
                     </a>
                 </li>
             </ul>

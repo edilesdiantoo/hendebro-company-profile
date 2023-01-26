@@ -46,7 +46,7 @@ class LoginController extends Controller
             Session::put('name', $get_user->name);
             Session::put('id', $get_user->id);
             Session::put('login', TRUE);
-            return redirect()->intended('/dashboard');
+            return redirect()->intended('/master/user');
         }
 
         // // dd('berhasil login');

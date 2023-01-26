@@ -1,20 +1,11 @@
 <?php
 
-// use App\Models\Post;
-// use App\Models\User;
-// use App\Http\Controllers\DashboardController;
-
-use App\Models\Category;
+use App\Models\Hdr;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MasterController;
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\MNGContenController;
-use App\Http\Controllers\LoginSampleController;
-use App\Http\Controllers\AdminCategoryController;
-use App\Http\Controllers\DashboardPostController;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+use App\Http\Controllers\MNGContentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,86 +18,25 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', function () {
-    return view('home', [
-        "title" => "Home",
-        "active"    => "home",
-    ]);
+    $title = "Home";
+    $active    = "home";
+    $get_hdr_data = Hdr::all();
+    // dd($get_hdr_data);
+    return view('home', compact('get_hdr_data', 'active'));
 });
 
-
-// Route::get('/home', function () {
-//     return view('home');
-// });
-
-Route::get('/about', function () {
-    return view('about', [
-        "title" => "About",
-        "name"  => "edi lesdianto",
-        "email" => "edilesdianto@gmail.com",
-        "img"   => "bg2.png",
-        "active"    => "about",
-    ]);
+Route::get('/clear-cache', function () {
+    $exitCode = Artisan::call('cache:clear');
+    echo $exitCode;
 });
-
-Route::get('/posts', [PostController::class, 'index']);
-// halaman single post
-Route::get('posts/{post:slug}', [PostController::class, 'show']);
-
-Route::get('/categories', function () {
-    return view('categories', [
-        'title'    => 'Post Categories',
-        "active"    => "categories",
-        'categories' => Category::all()
-    ]);
-});
-
-// Route::get('/categories/{category:slug}', function (Category $category) {
-//     return view('posts', [
-//         'title'    => "Post by Category : $category->name",
-//         "active"    => "categories",
-//         'posts'     => $category->posts->load('category', 'author'),
-//         // 'category' => $category->name
-//     ]);
-// });
-// ini sudah ada dimodel
-
-// Route::get('/authors/{author:username}', function (User $author) {
-//     return view('posts', [
-//         'title'  => "Post By Author : $author->name",
-//         'active' => 'posts',
-//         'posts'  => $author->post->load('category', 'author'),
-//     ]);
-// });
-// ini udah ada di model post
-
-//Login
-Route::get('/loginsample', [LoginSampleController::class, 'index'])->name('loginsample')->middleware('guest');
-Route::post('/loginsample', [LoginSampleController::class, 'authenticate']);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
-Route::post('/register', [RegisterController::class, 'store']);
+//master
 
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
-})->middleware('auth');
-
-Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
-Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
-
-Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin'); // excep adalah kecuali. atau method yang tidak dilkukan
-
-// master
-
-// Route::resource('/master/user', [MasterController::class, 'user'])->middleware('auth');
 Route::get('/master/user', [MasterController::class, 'user']);
 Route::get('/showUser', [MasterController::class, 'showUser']);
 Route::get('/tambahUser', [MasterController::class, 'tambahUser']);
@@ -117,11 +47,25 @@ Route::get('/editUser/{id}', [MasterController::class, 'editUser']);
 Route::get('/simpanEditUser/{id}', [MasterController::class, 'simpanEditUser']);
 Route::get('/deleteUser/{id}', [MasterController::class, 'deleteUser']);
 Route::get('/getSearch/{id}', [MasterController::class, 'getSearch']);
-//management content
-Route::get('/MngConten/hdr', [MNGContenController::class, 'hdr']);
-Route::get('/showMenuHdr', [MNGContenController::class, 'showMenuHdr']);
-Route::get('/tambahMenuHdr', [MNGContenController::class, 'tambahMenuHdr']);
-Route::get('/simpanMenuHdr', [MNGContenController::class, 'simpanMenuHdr']);
-Route::get('/editMenuHdr/{id}', [MNGContenController::class, 'editMenuHdr']);
-Route::get('/simpanEditMenuHdr/{id}', [MNGContenController::class, 'simpanEditMenuHdr']);
-Route::get('/deleteMenuHdr/{id}', [MNGContenController::class, 'deleteMenuHdr']);
+Route::get('master/category', [MasterController::class, 'category']);
+Route::get('/showCategory', [MasterController::class, 'showCategory']);
+Route::get('/fetch_category', [MasterController::class, 'fetch_category']);
+Route::get('/tambahCategory', [MasterController::class, 'tambahCategory']);
+Route::get('/simpanCategory', [MasterController::class, 'simpanCategory']);
+Route::get('/editCategory/{id}', [MasterController::class, 'editCategory']);
+Route::get('/simpanEditCategory/{id}', [MasterController::class, 'simpanEditCategory']);
+Route::get('/deleteCategory/{id}', [MasterController::class, 'deleteCategory']);
+Route::get('/getSearchCategory/{id}', [MasterController::class, 'getSearchCategory']);
+
+
+// management content
+Route::get('/MngContent/hdr', [MNGContentController::class, 'hdr']);
+Route::get('/showMenuHdr', [MNGContentController::class, 'showMenuHdr']);
+Route::get('/tambahMenuHdr', [MNGContentController::class, 'tambahMenuHdr']);
+Route::get('/simpanMenuHdr', [MNGContentController::class, 'simpanMenuHdr']);
+Route::get('/editMenuHdr/{id}', [MNGContentController::class, 'editMenuHdr']);
+Route::get('/simpanEditMenuHdr/{id}', [MNGContentController::class, 'simpanEditMenuHdr']);
+Route::get('/deleteMenuHdr/{id}', [MNGContentController::class, 'deleteMenuHdr']);
+Route::get('/MngContent/blog', [MNGContentController::class, 'blog']);
+Route::get('/showBlog', [MNGContentController::class, 'showBlog']);
+Route::get('/tambahBlog', [MNGContentController::class, 'tambahBlog']);
