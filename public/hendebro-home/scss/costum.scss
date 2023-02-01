@@ -31,6 +31,13 @@ $spacers: (
   5: $spacer * 3,
   6: $spacer * 5,
   7: $spacer * 9,
+  8: $spaces * 12,
 );
-      
+
+$pagination-color: #1c7b8a;
+$pagination-hover-color: #1c7b8a;
+$pagination-active-color:           #fff;
+$pagination-active-bg:              #1c7b8a;
+$pagination-active-border-color: #1c7b8a;
+
 @import "../node_modules/bootstrap/scss/bootstrap";
