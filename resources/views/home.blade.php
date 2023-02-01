@@ -63,7 +63,7 @@
                                     <a href="https://api.whatsapp.com/send/?phone=6281211403600&text=Saya%20ingin%20bertanya%20seputar%20layanan%20yang%20diberikan%20oleh%20hendebro"
                                         class="btn btn-outline-warning rounded-3" style="--bs-btn-padding-y: .8rem;">
                                         <div class="d-flex align-items-center justify-content-center">
-                                            <!-- <img src="assets/icon/play-y.svg" style="fill: red;"> -->
+                                            <!-- <img src="assets/img/icon/play-y.svg" style="fill: red;"> -->
                                             <span class="ps-2 fw-semibold">Learn More</span>
                                         </div>
                                     </a>
@@ -450,11 +450,11 @@
                                         150.000</div>
                                     <div class="d-flex align-items-end">
                                         <div>
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
                                         </div>
                                         <div class="ms-2">(1.764)</div>
                                     </div>
@@ -473,11 +473,11 @@
                                     <div class="text-primary pb-2">Gratis</div>
                                     <div class="d-flex align-items-end">
                                         <div>
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
                                         </div>
                                         <div class="ms-2">(34)</div>
                                     </div>
@@ -496,11 +496,11 @@
                                     <div class="text-black pb-2">Rp 250.000</div>
                                     <div class="d-flex align-items-end">
                                         <div>
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
                                         </div>
                                         <div class="ms-2">(34)</div>
                                     </div>
@@ -724,13 +724,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-xl-4 col-sm-12 col-xs-12 col-md-12">
-                        <a href="index.html" class=""><img src="assets/logo/logo-v3.png"
+                        <a href="index.html" class=""><img src="assets/img/logo/logo-v3.png"
                                 style="width: 50px; height: 50px;"></a>
                         <div class="text-white pt-4 pe-3">Website untuk membantu anda menemukan solusi dari
                             permasalahan
                             sistem pribadi maupun perusahaan anda.</div>
-                        <div class="text-white pt-4 d-flex align-items-center"><img src="assets/icon/copyright.png"
-                                class="pe-1">2020-2023 hendebro</div>
+                        <div class="text-white pt-4 d-flex align-items-center"><img
+                                src="assets/img/icon/copyright.png" class="pe-1">2020-2023 hendebro</div>
                     </div>
                     <div class="col-lg-2 col-xl-2 col-sm-6 col-xs-6 col-md-6">
                         <div class="fw-semibold text-white pb-3">Company</div>
@@ -793,11 +793,11 @@
             <div class="container">
                 <div class="row">
                     <div class="d-flex align-items-center">
-                        <a href="index.html" class=""><img src="assets/logo/logo-v2.png"
+                        <a href="index.html" class=""><img src="assets/img/logo/logo-v2.png"
                                 style="width: 50px; height: 50px;"></a>
                         <div class="ms-3 fw-bold fs-1 text-primary">hendebro.</div>
                         <div class="ms-auto">
-                            <img src="assets/icon/hamburg.svg" class="rounded-circle bg-teal p-2">
+                            <img src="assets/img/icon/hamburg.svg" class="rounded-circle bg-teal p-2">
                         </div>
                     </div>
                 </div>
@@ -885,7 +885,7 @@
             <div class="row">
                 <div class="col">
                     <div class="d-flex align-items-center">
-                        <img src="assets/icon/chat.png">
+                        <img src="assets/img/icon/chat.png">
                         <div class="ms-3">
                             <div class="text-black fw-bold fs-5">Need Answer?</div>
                             <div class="fw-light">Hubungi kami</div>
@@ -922,11 +922,11 @@
                                         150.000</div>
                                     <div class="d-flex align-items-end">
                                         <div>
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
                                         </div>
                                         <div class="ms-2">(87)</div>
                                     </div>
@@ -945,11 +945,11 @@
                                     <div class="text-black pb-3">Rp 250.000</div>
                                     <div class="d-flex align-items-end">
                                         <div>
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
                                         </div>
                                         <div class="ms-2">(34)</div>
                                     </div>
@@ -968,11 +968,11 @@
                                     <div class="text-primary pb-3">Gratis</div>
                                     <div class="d-flex align-items-end">
                                         <div>
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
-                                            <img src="assets/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
                                         </div>
                                         <div class="ms-2">(1.289)</div>
                                     </div>
@@ -990,11 +990,12 @@
                 <div class="row">
                     <div class="col-lg-4 col-xl-4 col-sm-12 col-xs-12 col-md-12">
                         <div class="d-flex align-items-center">
-                            <a href="index.html" class=""><img src="assets/logo/logo-v3.png"
+                            <a href="index.html" class=""><img src="assets/img/logo/logo-v3.png"
                                     style="width: 50px; height: 50px;"></a>
                             <div class="ms-3">
                                 <div class="text-white fw-bold fs-5">hendebro.</div>
-                                <div class="text-white"><img src="assets/icon/copyright.png" class="pe-1">2020-2023
+                                <div class="text-white"><img src="assets/img/icon/copyright.png"
+                                        class="pe-1">2020-2023
                                     hendebro</div>
                             </div>
                         </div>
