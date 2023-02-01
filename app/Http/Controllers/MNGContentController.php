@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Hdr;
-use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Models\Hdr;
+use App\Models\Blog;
+use App\Models\Category;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\User;
+use Illuminate\Validation\Validator;
 
 class MNGContentController extends Controller
 {
@@ -82,20 +86,24 @@ class MNGContentController extends Controller
     public function blog()
     {
         $active = "blog";
-
+        // dd($active);
         return view('mngContent.blog', compact('active'));
     }
 
     public function showBlog()
     {
         // $get_blog = DB::table('blog')->get();
-        $get_blog = DB::table('blog')
-            ->select('blog.*', 'hdrs.hdr_name', 'categories.name as category_name')
-            ->leftJoin('hdrs', 'hdrs.id', 'blog.hdr_id')
-            ->leftJoin('categories', 'categories.id', 'blog.category_id')
+        // $data = Blog::join('state', 'state.country_id', '=', 'country.country_id')
+        //     ->join('hdrs', 'city.state_id', '=', 'state.state_id')
+        //     ->get(['blog.country_name', 'state.state_name', 'city.city_name']);
+
+        $getBlog = DB::table('blogs')
+            ->select('blogs.*', 'hdrs.hdr_name', 'categories.name as category_name')
+            ->leftJoin('hdrs', 'hdrs.id', 'blogs.hdr_id')
+            ->leftJoin('categories', 'categories.id', 'blogs.category_id')
             ->latest()->paginate(5);
-        // dd($get_blog);
-        return view('mngContent.modal.showBlog', compact('get_blog'));
+        // dd($getBlog);
+        return view('mngContent.modal.showBlog', compact('getBlog'));
     }
 
     public function tambahBlog()
@@ -107,17 +115,87 @@ class MNGContentController extends Controller
 
     public function simpanBlog(Request $request)
     {
-        $validatedData = $request->validate([
-            'judul'       => 'required',
-            'category_id' => 'required',
-            'hdr_id'      => 'required',
-            'gambar'      => 'image|file|max:100000',
-        ]);
+        $validatedData = $request->validate(
+            [
+                'judul'       => 'required',
+                'category_id' => 'required',
+                'hdr_id'      => 'required',
+                'hit'         => 'required',
+                'image'      => 'image|file|max:10000',
+            ]
+        );
 
-        if ($request->file('gambar')) {
-            $validatedData['gambar'] = $request->file('gambar')->store('post-category ');
+        if ($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('post-blog');
         }
-        // Hdr::create($validatedData);
-        $insertBlog = DB::table('blog')->insert($validatedData);
+
+        // dd($validatedData);
+
+        // $validatedData['user_id'] = auth()->user()->id;
+        // $validatedData['exerpt'] = Str::limit(strip_tags($request->body), 200);
+
+        $blog_insert = Blog::create($validatedData);
+        return Response()->json($blog_insert);
+
+        // return redirect('/dashboard/posts')->with('success', 'New post has been added!');
+    }
+
+    public function fetch_blog(Request $request)
+    {
+        if ($request->ajax()) {
+            $getBlog = DB::table('blogs')
+                ->select('blogs.*', 'hdrs.hdr_name', 'categories.name as category_name')
+                ->leftJoin('hdrs', 'hdrs.id', 'blogs.hdr_id')
+                ->leftJoin('categories', 'categories.id', 'blogs.category_id')
+                ->latest()->paginate(5);
+            return view('mngContent.modal.showBlog', compact('getBlog'))->render();
+        }
+    }
+
+    public function editBlog($id)
+    {
+        $getCategoty = Category::all();
+        $getBlog = Blog::findOrFail($id);
+        $getMenuHdr = Hdr::all();
+
+        return view('mngContent.modal.editBlog', compact('getBlog', 'getCategoty', 'getMenuHdr'))->render();
+    }
+
+    public function deleteBlog($id)
+    {
+        // $data = User::findOrFail($id);
+        $hapusBlog = Blog::destroy($id);
+        return response()->json($hapusBlog, 200);
+    }
+
+    public function simpanBlogEdit(Request $request)
+    {
+        $editBlog =
+            [
+                'judul'       => 'required',
+                'category_id' => 'required',
+                'hdr_id'      => 'required',
+                'hit'         => 'required',
+                'image'      => 'image|file|max:10000',
+            ];
+
+        $validatedData = $request->validate($editBlog);
+
+        if ($request->file('image')) {
+
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+
+            $validatedData['image'] = $request->file('image')->store('post-blog');
+        }
+
+        // dd($validatedData);
+
+        $blogSaveEdit = Blog::where('id', $request->id)
+            ->update($validatedData);
+        return Response()->json($blogSaveEdit);
+
+        // return redirect('/dashboard/posts')->with('success', 'New post has been added!');
     }
 }

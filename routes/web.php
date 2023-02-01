@@ -69,3 +69,8 @@ Route::get('/deleteMenuHdr/{id}', [MNGContentController::class, 'deleteMenuHdr']
 Route::get('/MngContent/blog', [MNGContentController::class, 'blog']);
 Route::get('/showBlog', [MNGContentController::class, 'showBlog']);
 Route::get('/tambahBlog', [MNGContentController::class, 'tambahBlog']);
+Route::post('/simpanBlog', [MNGContentController::class, 'simpanBlog']);
+Route::get('/fetch_blog', [MNGContentController::class, 'fetch_blog']);
+Route::get('/deleteBlog/{id}', [MNGContentController::class, 'deleteBlog']);
+Route::get('/editBlog/{id}', [MNGContentController::class, 'editBlog']);
+Route::post('/simpanBlogEdit', [MNGContentController::class, 'simpanBlogEdit']);

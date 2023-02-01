@@ -11,22 +11,24 @@
         </tr>
     </thead>
     <tbody>
-        @foreach ($get_blog as $key => $blog)
+        @foreach ($getBlog as $key => $blog)
             <tr>
                 <td>
-                    {{ $key + $get_blog->firstItem() }}
+                    {{ $key + $getBlog->firstItem() }}
                 </td>
                 <td>{{ $blog->judul }}</td>
                 <td>{{ $blog->hdr_name }}</td>
                 <td>{{ $blog->category_name }}</td>
-                <td>{{ $blog->gambar }}</td>
+                <td>
+                    {{-- <img src="{{ asset('storage/' . $blog->image) }}" alt=""> --}}
+                </td>
                 <td>{{ $blog->hit }}</td>
                 <td>
-                    <a href="#" onclick="editMenuHdr({{ $blog->id }})">
+                    <a href="#" onclick="editBlog({{ $blog->id }})">
                         <i class='bx bx-edit-alt'></i>
                     </a>
                     &nbsp;
-                    <a href="#" onclick="hapusMenuHdr({{ $blog->id }})">
+                    <a href="#" onclick="hapusBlog({{ $blog->id }})">
                         <i class='bx bx-trash-alt'></i>
                     </a>
                 </td>
@@ -35,4 +37,4 @@
     </tbody>
 </table>
 <br>
-<div class="row">{{ @$get_blog->onEachSide(2)->links() }}</div>
+<div class="row">{{ @$getBlog->onEachSide(2)->links() }}</div>

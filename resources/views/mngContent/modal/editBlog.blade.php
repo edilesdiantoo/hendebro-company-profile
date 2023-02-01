@@ -3,10 +3,12 @@
         <label for="hdr_name" class="form-label">Judul</label>
         <input type="hidden" name="hit" id="hit" value="1">
         <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
+        <input type="hidden" name="id" id="id" value="{{ $getBlog->id }}">
         <input type="text" name="judul" id="judul" class="form-control @error('judul') is-invalid @enderror"
-            placeholder="Nama Menu Header" />
+            placeholder="Nama Menu Header" value="{{ $getBlog->judul }}" />
         @error('judul')
-            <div class="invalid-feedback">{{ $message }}</div>
+            <div class="invalid-feedback">{{ $message }}
+            </div>
         @enderror
     </div>
 </div>
@@ -15,8 +17,9 @@
         <label for="category_id" class="form-label">Category</label>
         <select class="form-select" id="category_id" name="category_id">
             <option value="">Pilih</option>
-            @foreach ($get_category_data as $key => $category)
-                <option value="{{ $category->id }}">{{ $category->name }}</option>
+            @foreach ($getCategoty as $key => $category)
+                <option value="{{ $category->id }}" {{ $category->id == $getBlog->category_id ? 'selected' : '' }}>
+                    {{ $category->name }}</option>
             @endforeach
         </select>
     </div>
@@ -26,14 +29,21 @@
         <label for="hdr_id" class="form-label">Header Menu</label>
         <select class="form-select" id="hdr_id" name="hdr_id">
             <option value="">Pilih</option>
-            @foreach ($get_hdr_data as $key => $hdr)
-                <option value="{{ $hdr->id }}">{{ $hdr->hdr_name }}</option>
+            @foreach ($getMenuHdr as $key => $hdr)
+                <option value="{{ $hdr->id }}" {{ $hdr->id == $getBlog->hdr_id ? 'selected' : '' }}>
+                    {{ $hdr->hdr_name }}</option>
             @endforeach
         </select>
     </div>
 </div>
 <div class="mb-3">
     <img class="img-preview img-fluid mb-3 col-sm-5">
+    <input type="hidden" name="oldImage" value="{{ $getBlog->image }}">
+    @if ($getBlog->image)
+        <img src="{{ asset('storage/' . $getBlog->image) }}" class="img-preview img-fluid mb-3 col-sm-5 d-block">
+    @else
+        <img class="img-preview img-fluid mb-3 col-sm-5">
+    @endif
     <input class="form-control @error('image') is-invalid 
     
     @enderror" type="file" id="image"
