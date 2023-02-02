@@ -75,21 +75,21 @@
                         <div>
                             <img src="assets/img/main1.png" class="animatedimg rounded-4">
                         </div>
-                        <div class="position-absolute" style="top: 60%; right: 5%;">
+                        <div class="position-absolute iright" style="top: 24.5rem;">
                             <img src="assets/img/main-1.png" class="animatedimg-2">
                         </div>
-                        <div class="position-absolute" style="top: 70%; right: 5%;">
+                        <div class="position-absolute iright" style="top: 29rem;">
                             <img src="assets/img/main-2.png" class="animatedimg-3">
                         </div>
-                        <div class="position-absolute" style="top: 80%; right: 5%;">
+                        <div class="position-absolute iright" style="top: 33rem;">
                             <img src="assets/img/main-3.png" class="animatedimg-4">
                         </div>
-                        <div class="position-absolute" style="top: 80%; right: 5%;">
+                        <div class="position-absolute iright" style="top: 33rem;">
                             <img src="assets/img/main-4.png" class="animatedimg-5">
                         </div>
                         <!-- check animated -->
 
-                        <div class="position-absolute" style="top: 38%; right: 12%; z-index: 99;">
+                        <div class="position-absolute iright2" style="top: 16rem; z-index: 99;">
                             <div class="container-anim">
                                 <div class="circle-border"></div>
                                 <div class="circle">

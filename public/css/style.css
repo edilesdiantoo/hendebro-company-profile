@@ -499,6 +499,32 @@ html {
     }
  }
 
+@media (min-width: 1025px) {
+  .iright {
+    right: 4.5rem;
+  }
+  .iright2 {
+    right: 11rem;
+  }
+}
+
+@media (min-width: 1367px) {
+  .iright {
+    right: 3.5rem;
+  }
+  .iright2 {
+    right: 10rem;
+  }
+}
+
+/*@media (min-width: 1400px) {
+  .iright {
+    right: 12.5rem;
+  }
+  .iright2 {
+    right: 11rem;
+  }
+}*/
 
 
 
