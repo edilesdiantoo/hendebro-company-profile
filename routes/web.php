@@ -59,6 +59,7 @@ Route::get('/getSearchCategory/{id}', [MasterController::class, 'getSearchCatego
 
 
 // management content
+//menu hdr
 Route::get('/MngContent/hdr', [MNGContentController::class, 'hdr']);
 Route::get('/showMenuHdr', [MNGContentController::class, 'showMenuHdr']);
 Route::get('/tambahMenuHdr', [MNGContentController::class, 'tambahMenuHdr']);
@@ -66,6 +67,18 @@ Route::get('/simpanMenuHdr', [MNGContentController::class, 'simpanMenuHdr']);
 Route::get('/editMenuHdr/{id}', [MNGContentController::class, 'editMenuHdr']);
 Route::get('/simpanEditMenuHdr/{id}', [MNGContentController::class, 'simpanEditMenuHdr']);
 Route::get('/deleteMenuHdr/{id}', [MNGContentController::class, 'deleteMenuHdr']);
+
+//menu content
+Route::get('/MngContent/menucontent', [MNGContentController::class, 'menucontent']);
+Route::get('/showMenuContent', [MNGContentController::class, 'showMenuContent']);
+Route::get('/tambahMenuContent', [MNGContentController::class, 'tambahMenuContent']);
+Route::get('/simpanMenuContent', [MNGContentController::class, 'simpanMenuContent']);
+Route::get('/editMenuContent/{id}', [MNGContentController::class, 'editMenuContent']);
+Route::get('/simpanEditMenuContent/{id}', [MNGContentController::class, 'simpanEditMenuContent']);
+Route::get('/deleteMenuContent/{id}', [MNGContentController::class, 'deleteMenuContent']);
+Route::get('/getSearchMenu/{id}', [MNGContentController::class, 'getSearchMenu']);
+
+//blog
 Route::get('/MngContent/blog', [MNGContentController::class, 'blog']);
 Route::get('/showBlog', [MNGContentController::class, 'showBlog']);
 Route::get('/tambahBlog', [MNGContentController::class, 'tambahBlog']);
@@ -74,3 +87,13 @@ Route::get('/fetch_blog', [MNGContentController::class, 'fetch_blog']);
 Route::get('/deleteBlog/{id}', [MNGContentController::class, 'deleteBlog']);
 Route::get('/editBlog/{id}', [MNGContentController::class, 'editBlog']);
 Route::post('/simpanBlogEdit', [MNGContentController::class, 'simpanBlogEdit']);
+
+//sourceCode
+Route::get('/MngContent/scode', [MNGContentController::class, 'scode']);
+Route::get('/showScode', [MNGContentController::class, 'showScode']);
+Route::get('/tambahScode', [MNGContentController::class, 'tambahScode']);
+Route::post('/simpanScode', [MNGContentController::class, 'simpanScode']);
+Route::get('/fetch_scode', [MNGContentController::class, 'fetch_scode']);
+Route::get('/editScode/{id}', [MNGContentController::class, 'editScode']);
+Route::post('/simpanScode', [MNGContentController::class, 'simpanScode']);
+Route::get('/deleteScode/{id}', [MNGContentController::class, 'deleteScode']);

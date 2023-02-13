@@ -93,9 +93,9 @@
             </a>
 
             <ul class="menu-sub">
-                <li class="menu-item {{ Request::is('MngContent/hdr*') ? 'active' : '' }}">
-                    <a href="/MngContent/hdr" class="menu-link">
-                        <div data-i18n="Without menu">Menu HDR</div>
+                <li class="menu-item {{ Request::is('MngContent/menucontent*') ? 'active' : '' }}">
+                    <a href="/MngContent/menucontent" class="menu-link">
+                        <div data-i18n="Without menu">Menu Content</div>
                     </a>
                 </li>
                 <li class="menu-item">
@@ -106,6 +106,11 @@
                 <li class="menu-item {{ Request::is('MngContent/blog*') ? 'active' : '' }}">
                     <a href="/MngContent/blog" class="menu-link">
                         <div data-i18n="Without navbar">Blog</div>
+                    </a>
+                </li>
+                <li class="menu-item {{ Request::is('MngContent/scode*') ? 'active' : '' }}">
+                    <a href="/MngContent/scode" class="menu-link">
+                        <div data-i18n="Without navbar">Source Code</div>
                     </a>
                 </li>
             </ul>

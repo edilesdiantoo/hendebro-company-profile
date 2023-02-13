@@ -2,85 +2,97 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Hdr;
 use App\Models\Blog;
+use App\Models\Menu;
 use App\Models\Category;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use App\Models\CategoryMenu;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Validation\Validator;
+use Illuminate\Support\Facades\Storage;
 
 class MNGContentController extends Controller
 {
-    public function hdr()
+    public function menucontent()
     {
-        $get_hdr_data = Hdr::all();
+        $getMenuContent = Menu::all();
         $active = "hdr";
-        return view('mngContent.hdr', compact('get_hdr_data', 'active'));
+        return view('mngContent.menuContent', compact('getMenuContent', 'active'));
     }
 
-    public function showMenuHdr()
+    public function showMenuContent()
     {
-        $getMenuHdr = Hdr::latest()->paginate(5);
-        // $rank = $getUser->firstItem();
-        // $test_join = DB::table('users')
-        //     ->select('users.*', 'level_user.level_name')
-        //     ->leftJoin('level_user', 'level_user.id', 'users.is_admin')
-        //     ->latest()->paginate(5);
-        // dd($test_join);
-        return view('mngContent.modal.showMenuHdr', compact('getMenuHdr'));
+        // $getMenuContent = Menu::latest()->paginate(5);
+        $getMenuContent = DB::table('menus')
+            ->select('menus.name as name_menu', 'menus.status', 'menus.id', 'menus.keterangan', 'category_menus.name as name_category_menu')
+            ->leftJoin('category_menus', 'menus.category_menu_id', 'category_menus.id')
+            ->paginate(5);
+        // dd($getMenuContent);
+        return view('mngContent.modal.showMenuContent', compact('getMenuContent'));
     }
 
-    public function tambahMenuHdr()
+    public function tambahMenuContent()
     {
-        $test = 'test';
-        // $getLevelUser = DB::table('level_user')
-        //     ->select('level_name', 'id')
-        //     ->from('level_user')
-        //     ->get();
-        // dd($getLevelUser);
-        return view('mngContent.modal.tambahMenuHdr', compact('test'));
+        $getCategoryMenu = CategoryMenu::all();
+        return view('mngContent.modal.tambahMenuContent', compact('getCategoryMenu'));
     }
 
-    public function simpanMenuHdr(Request $request)
+    public function simpanMenuContent(Request $request)
     {
         $validatedData = $request->validate([
-            'hdr_name'     => 'required|max:50',
-            'title' => 'required',
+            'name'     => 'required|max:50',
+            'category_menu_id' => 'required',
+            'keterangan' => 'required',
+            'status' => 'required',
         ]);
-        Hdr::create($validatedData);
+        Menu::create($validatedData);
     }
 
-    public function editMenuHdr($id)
+    public function editMenuContent($id)
     {
-        $getMenuhdrData = Hdr::findOrFail($id);
+        $getMenuContent = Menu::findOrFail($id);
+        $getCategoryMenu = CategoryMenu::all();
 
-        return view('mngContent.modal.editMenuHdr', compact('getMenuhdrData'))->render();
+        return view('mngContent.modal.editMenuContent', compact('getMenuContent', 'getCategoryMenu'))->render();
     }
 
-    public function simpanEditMenuHdr(Request $request, $id)
+    public function simpanEditMenuContent(Request $request, $id)
     {
         // $data = Hdr::findOrFail($id);
         $rules = [
-            'hdr_name'     => $request->hdr_name,
-            'title' => $request->title,
+            'name'             => $request->name,
+            'category_menu_id' => $request->category_menu_id,
+            'keterangan'       => $request->keterangan,
+            'status'           => $request->status,
         ];
 
 
-        $saveEdit =  Hdr::where('id', $id)
+        $saveEdit =  Menu::where('id', $id)
             ->update($rules);
 
         return response()->json($saveEdit, 200);
     }
 
-    public function deleteMenuHdr($id)
+    public function deleteMenuConten($id)
     {
         // $data = User::findOrFail($id);
-        $hapusMenuHdr = Hdr::destroy($id);
+        $hapusMenuHdr = Menu::destroy($id);
         return response()->json($hapusMenuHdr, 200);
+    }
+
+    public function getSearchMenu($search)
+    {
+        $getMenuContent = DB::table('menus')
+            ->select('menus.name as name_menu', 'menus.status', 'menus.id', 'menus.keterangan', 'category_menus.name as name_category_menu')
+            ->leftJoin('category_menus', 'menus.category_menu_id', 'category_menus.id')
+            ->where('menus.name', 'LIKE', '%' . $search . '%')
+            ->latest()->paginate(5);
+        // dd($test_join);
+        return view('master.modal.showMenuContent', compact('getMenuContent'));
     }
 
     public function blog()
@@ -92,11 +104,6 @@ class MNGContentController extends Controller
 
     public function showBlog()
     {
-        // $get_blog = DB::table('blog')->get();
-        // $data = Blog::join('state', 'state.country_id', '=', 'country.country_id')
-        //     ->join('hdrs', 'city.state_id', '=', 'state.state_id')
-        //     ->get(['blog.country_name', 'state.state_name', 'city.city_name']);
-
         $getBlog = DB::table('blogs')
             ->select('blogs.*', 'hdrs.hdr_name', 'categories.name as category_name')
             ->leftJoin('hdrs', 'hdrs.id', 'blogs.hdr_id')
@@ -197,5 +204,24 @@ class MNGContentController extends Controller
         return Response()->json($blogSaveEdit);
 
         // return redirect('/dashboard/posts')->with('success', 'New post has been added!');
+    }
+
+    public function scode()
+    {
+        $active = "scode";
+        // dd($active);
+        return view('mngContent.scode', compact('active'));
+    }
+
+    public function showScode()
+    {
+
+        $getScode = DB::table('source_codes')
+            ->select('source_codes.*', 'hdrs.hdr_name', 'categories.name as category_name')
+            ->leftJoin('hdrs', 'hdrs.id', 'source_codes.hdr_id')
+            ->leftJoin('categories', 'categories.id', 'source_codes.category_id')
+            ->latest()->paginate(5);
+        // dd($getScode);
+        return view('mngContent.modal.showScode', compact('getScode'));
     }
 }
