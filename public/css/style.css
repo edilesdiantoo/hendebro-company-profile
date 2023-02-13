@@ -519,7 +519,7 @@ html {
 
 /*@media (min-width: 1400px) {
   .iright {
-    right: 12.5rem;
+    right: 9.5rem;
   }
   .iright2 {
     right: 11rem;
@@ -533,31 +533,31 @@ html {
   height: 92px;
 }
 
-.circle,
-.circle-border {
+.circle1,
+.circle-border1 {
   width: 30px;
   height: 30px;
   border-radius: 50%;
 }
 
-.circle {
+.circle1 {
   z-index: 1;
   position: relative;
   background: white;
   transform: scale(0);
   animation: success-anim 700ms ease;
-  animation-delay: 8400ms;
+  animation-delay: 3300ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
-.circle-border {
+.circle-border1 {
   z-index: 0;
   position: absolute;
   background: #1c7b8a;
   transform: scale(0);
   animation: circle-anim 400ms ease;
-  animation-delay: 8400ms;
+  animation-delay: 3300ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -602,4 +602,153 @@ html {
   top: 51%;
   left: 37%;
   transform: rotateZ(-44deg);
+}
+
+.circle2,
+.circle-border2 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.circle2 {
+  z-index: 1;
+  position: relative;
+  background: white;
+  transform: scale(0);
+  animation: success-anim2 700ms ease;
+  animation-delay: 4800ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.circle-border2 {
+  z-index: 0;
+  position: absolute;
+  background: #1c7b8a;
+  transform: scale(0);
+  animation: circle-anim2 400ms ease;
+  animation-delay: 4800ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes success-anim2 {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes circle-anim2 {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+
+.circle3,
+.circle-border3 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.circle3 {
+  z-index: 1;
+  position: relative;
+  background: white;
+  transform: scale(0);
+  animation: success-anim3 700ms ease;
+  animation-delay: 6200ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.circle-border3 {
+  z-index: 0;
+  position: absolute;
+  background: #1c7b8a;
+  transform: scale(0);
+  animation: circle-anim3 400ms ease;
+  animation-delay: 6200ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes success-anim3 {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes circle-anim3 {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+
+.circle4,
+.circle-border4 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.circle4 {
+  z-index: 1;
+  position: relative;
+  background: white;
+  transform: scale(0);
+  animation: success-anim4 700ms ease;
+  animation-delay: 7800ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.circle-border4 {
+  z-index: 0;
+  position: absolute;
+  background: #1c7b8a;
+  transform: scale(0);
+  animation: circle-anim4 400ms ease;
+  animation-delay: 7800ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes success-anim4 {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes circle-anim4 {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1.1);
+  }
 }

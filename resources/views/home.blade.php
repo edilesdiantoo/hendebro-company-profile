@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Solusi Sistem UMKM atau Perusahaan</title>
-    <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/img/icon/favicon.ico">
     <!-- <link href="dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
     <link rel="stylesheet" type="text/css" href="css/costum.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -71,54 +71,56 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-7 text-end">
-                        <div>
-                            <img src="assets/img/main1.png" class="animatedimg rounded-4">
-                        </div>
-                        <div class="position-absolute iright" style="top: 24.5rem;">
-                            <img src="assets/img/main-1.png" class="animatedimg-2">
-                        </div>
-                        <div class="position-absolute iright" style="top: 29rem;">
-                            <img src="assets/img/main-2.png" class="animatedimg-3">
-                        </div>
-                        <div class="position-absolute iright" style="top: 33rem;">
-                            <img src="assets/img/main-3.png" class="animatedimg-4">
-                        </div>
-                        <div class="position-absolute iright" style="top: 33rem;">
-                            <img src="assets/img/main-4.png" class="animatedimg-5">
-                        </div>
-                        <!-- check animated -->
+        <div class="col-7 text-end">
+          <div style="position: relative;">
+            <div>
+              <img src="assets/img/main1.png" class="animatedimg rounded-4">
+            </div>
+            <div class="position-absolute" style="top: 55%; right: -5%;">
+              <img src="assets/img/main-1.png" class="animatedimg-2">
+            </div>
+            <div class="position-absolute" style="top: 68%; right: -5%;">
+              <img src="assets/img/main-2.png" class="animatedimg-3">
+            </div>
+            <div class="position-absolute" style="top: 81%; right: -5%;">
+              <img src="assets/img/main-3.png" class="animatedimg-4">
+            </div>
+            <div class="position-absolute" style="top: 82%; right: -5%;">
+              <img src="assets/img/main-4.png" class="animatedimg-5">
+            </div>
+            <!-- check animated -->
 
-                        <div class="position-absolute iright2" style="top: 16rem; z-index: 99;">
-                            <div class="container-anim">
-                                <div class="circle-border"></div>
-                                <div class="circle">
-                                    <div class="success"></div>
-                                </div>
-                            </div>
+            <div class="position-absolute" style="top: 27%; right: 7%; z-index: 99;">
+              <div class="container-anim">
+                <div class="circle-border1"></div>
+                <div class="circle1">
+                  <div class="success"></div>
+                </div>
+              </div>
 
-                            <div class="container-anim">
-                                <div class="circle-border"></div>
-                                <div class="circle">
-                                    <div class="success"></div>
-                                </div>
-                            </div>
+              <div class="container-anim">
+                <div class="circle-border2"></div>
+                <div class="circle2">
+                  <div class="success"></div>
+                </div>
+              </div>
 
-                            <div class="container-anim">
-                                <div class="circle-border"></div>
-                                <div class="circle">
-                                    <div class="success"></div>
-                                </div>
-                            </div>
+              <div class="container-anim">
+                <div class="circle-border3"></div>
+                <div class="circle3">
+                  <div class="success"></div>
+                </div>
+              </div>
 
-                            <div class="container-anim">
-                                <div class="circle-border"></div>
-                                <div class="circle">
-                                    <div class="success"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              <div class="container-anim">
+                <div class="circle-border4"></div>
+                <div class="circle4">
+                  <div class="success"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
                     <!-- <div class="col text-end">
           <img src="assets/img/anim-1.png" class="anim-1">
           <img src="assets/img/anim-2.png" class="anim-2">
@@ -206,7 +208,7 @@
                     <div class="col">
                         <div class="bg-white rounded-4 p-4">
                             <a href="blog.html" class="text-decoration-none">
-                                <img src="https://via.placeholder.com/500x300.png?text=500x300"
+                                <img src="assets/img/tips1.png"
                                     class="img-fluid rounded-4">
                                 <div class="pt-3">
                                     <div class="fw-bold text-black">UI / UX : Menggunakan Figma Sebagai Tools Utama
@@ -221,7 +223,7 @@
                     <div class="col">
                         <div class="bg-white rounded-4 p-4">
                             <a href="blog.html" class="text-decoration-none">
-                                <img src="https://via.placeholder.com/500x300.png?text=500x300"
+                                <img src="assets/img/tips2.png"
                                     class="img-fluid rounded-4">
                                 <div class="pt-3">
                                     <div class="fw-bold text-black">Laravel Tutorial : Cara membuat model pada blade
@@ -236,7 +238,7 @@
                     <div class="col">
                         <div class="bg-white rounded-4 p-4">
                             <a href="blog.html" class="text-decoration-none">
-                                <img src="https://via.placeholder.com/500x300.png?text=500x300"
+                                <img src="assets/img/tips3.png"
                                     class="img-fluid rounded-4">
                                 <div class="pt-3">
                                     <div class="fw-bold text-black">HTML Tutorial : Mahir Menggunakan Tag HTML</div>
@@ -269,7 +271,7 @@
                 <div class="d-flex justify-content-between ltor">
                     <div class="bg-teal rounded-4 p-4">
                         <div class="d-flex align-items-center">
-                            <img src="https://via.placeholder.com/80x80.png?text=80x80" class="img-fluid rounded-4">
+                            <img src="assets/img/laravel.png" class="img-fluid rounded-4">
                             <div class="ps-2">
                                 <div class="fw-bold text-black">Laravel</div>
                                 <div class="fw-light text-grey">Back-End Development</div>
@@ -278,7 +280,7 @@
                     </div>
                     <div class="bg-teal rounded-4 p-4">
                         <div class="d-flex align-items-center">
-                            <img src="https://via.placeholder.com/80x80.png?text=80x80" class="img-fluid rounded-4">
+                            <img src="assets/img/codeigniter.png" class="img-fluid rounded-4">
                             <div class="ps-2">
                                 <div class="fw-bold text-black">Codeigniter</div>
                                 <div class="fw-light text-grey">Back-End Development</div>
@@ -287,7 +289,7 @@
                     </div>
                     <div class="bg-teal rounded-4 p-4">
                         <div class="d-flex align-items-center">
-                            <img src="https://via.placeholder.com/80x80.png?text=80x80" class="img-fluid rounded-4">
+                            <img src="assets/img/html.png" class="img-fluid rounded-4">
                             <div class="ps-2">
                                 <div class="fw-bold text-black">HTML</div>
                                 <div class="fw-light text-grey">Front-End Development</div>
@@ -296,7 +298,7 @@
                     </div>
                     <div class="bg-teal rounded-4 p-4">
                         <div class="d-flex align-items-center">
-                            <img src="https://via.placeholder.com/80x80.png?text=80x80" class="img-fluid rounded-4">
+                            <img src="assets/img/js.png" class="img-fluid rounded-4">
                             <div class="ps-2">
                                 <div class="fw-bold text-black">Javascript</div>
                                 <div class="fw-light text-grey">Front-End Development</div>
@@ -307,7 +309,7 @@
                 <div class="d-flex justify-content-between ltor ltor2">
                     <div class="bg-teal rounded-4 p-4">
                         <div class="d-flex align-items-center">
-                            <img src="https://via.placeholder.com/80x80.png?text=80x80" class="img-fluid rounded-4">
+                            <img src="assets/img/laravel.png" class="img-fluid rounded-4">
                             <div class="ps-2">
                                 <div class="fw-bold text-black">Laravel</div>
                                 <div class="fw-light text-grey">Back-End Development</div>
@@ -316,7 +318,7 @@
                     </div>
                     <div class="bg-teal rounded-4 p-4">
                         <div class="d-flex align-items-center">
-                            <img src="https://via.placeholder.com/80x80.png?text=80x80" class="img-fluid rounded-4">
+                            <img src="assets/img/codeigniter.png" class="img-fluid rounded-4">
                             <div class="ps-2">
                                 <div class="fw-bold text-black">Codeigniter</div>
                                 <div class="fw-light text-grey">Back-End Development</div>
@@ -325,7 +327,7 @@
                     </div>
                     <div class="bg-teal rounded-4 p-4">
                         <div class="d-flex align-items-center">
-                            <img src="https://via.placeholder.com/80x80.png?text=80x80" class="img-fluid rounded-4">
+                            <img src="assets/img/html.png" class="img-fluid rounded-4">
                             <div class="ps-2">
                                 <div class="fw-bold text-black">HTML</div>
                                 <div class="fw-light text-grey">Front-End Development</div>
@@ -334,7 +336,7 @@
                     </div>
                     <div class="bg-teal rounded-4 p-4">
                         <div class="d-flex align-items-center">
-                            <img src="https://via.placeholder.com/80x80.png?text=80x80" class="img-fluid rounded-4">
+                            <img src="assets/img/js.png" class="img-fluid rounded-4">
                             <div class="ps-2">
                                 <div class="fw-bold text-black">Javascript</div>
                                 <div class="fw-light text-grey">Front-End Development</div>
@@ -349,7 +351,7 @@
                 <div class="d-flex justify-content-between rtol">
                     <div class="bg-teal rounded-4 p-4">
                         <div class="d-flex align-items-center">
-                            <img src="https://via.placeholder.com/80x80.png?text=80x80" class="img-fluid rounded-4">
+                            <img src="assets/img/laravel.png" class="img-fluid rounded-4">
                             <div class="ps-2">
                                 <div class="fw-bold text-black">Laravel</div>
                                 <div class="fw-light text-grey">Back-End Development</div>
@@ -358,7 +360,7 @@
                     </div>
                     <div class="bg-teal rounded-4 p-4">
                         <div class="d-flex align-items-center">
-                            <img src="https://via.placeholder.com/80x80.png?text=80x80" class="img-fluid rounded-4">
+                            <img src="assets/img/codeigniter.png" class="img-fluid rounded-4">
                             <div class="ps-2">
                                 <div class="fw-bold text-black">Codeigniter</div>
                                 <div class="fw-light text-grey">Back-End Development</div>
@@ -367,7 +369,7 @@
                     </div>
                     <div class="bg-teal rounded-4 p-4">
                         <div class="d-flex align-items-center">
-                            <img src="https://via.placeholder.com/80x80.png?text=80x80" class="img-fluid rounded-4">
+                            <img src="assets/img/html.png" class="img-fluid rounded-4">
                             <div class="ps-2">
                                 <div class="fw-bold text-black">HTML</div>
                                 <div class="fw-light text-grey">Front-End Development</div>
@@ -376,7 +378,7 @@
                     </div>
                     <div class="bg-teal rounded-4 p-4">
                         <div class="d-flex align-items-center">
-                            <img src="https://via.placeholder.com/80x80.png?text=80x80" class="img-fluid rounded-4">
+                            <img src="assets/img/js.png" class="img-fluid rounded-4">
                             <div class="ps-2">
                                 <div class="fw-bold text-black">Javascript</div>
                                 <div class="fw-light text-grey">Front-End Development</div>
@@ -387,7 +389,7 @@
                 <div class="d-flex justify-content-between rtol rtol2">
                     <div class="bg-teal rounded-4 p-4">
                         <div class="d-flex align-items-center">
-                            <img src="https://via.placeholder.com/80x80.png?text=80x80" class="img-fluid rounded-4">
+                            <img src="assets/img/laravel.png" class="img-fluid rounded-4">
                             <div class="ps-2">
                                 <div class="fw-bold text-black">Laravel</div>
                                 <div class="fw-light text-grey">Back-End Development</div>
@@ -396,7 +398,7 @@
                     </div>
                     <div class="bg-teal rounded-4 p-4">
                         <div class="d-flex align-items-center">
-                            <img src="https://via.placeholder.com/80x80.png?text=80x80" class="img-fluid rounded-4">
+                            <img src="assets/img/codeigniter.png" class="img-fluid rounded-4">
                             <div class="ps-2">
                                 <div class="fw-bold text-black">Codeigniter</div>
                                 <div class="fw-light text-grey">Back-End Development</div>
@@ -405,7 +407,7 @@
                     </div>
                     <div class="bg-teal rounded-4 p-4">
                         <div class="d-flex align-items-center">
-                            <img src="https://via.placeholder.com/80x80.png?text=80x80" class="img-fluid rounded-4">
+                            <img src="assets/img/html.png" class="img-fluid rounded-4">
                             <div class="ps-2">
                                 <div class="fw-bold text-black">HTML</div>
                                 <div class="fw-light text-grey">Front-End Development</div>
@@ -414,7 +416,7 @@
                     </div>
                     <div class="bg-teal rounded-4 p-4">
                         <div class="d-flex align-items-center">
-                            <img src="https://via.placeholder.com/80x80.png?text=80x80" class="img-fluid rounded-4">
+                            <img src="assets/img/js.png" class="img-fluid rounded-4">
                             <div class="ps-2">
                                 <div class="fw-bold text-black">Javascript</div>
                                 <div class="fw-light text-grey">Front-End Development</div>
@@ -440,7 +442,29 @@
                     <div class="col">
                         <div class="bg-white rounded-4 p-4">
                             <a href="sourcecode.html" class="text-decoration-none">
-                                <img src="https://via.placeholder.com/500x300.png?text=500x300"
+                                <img src="assets/img/kelas1.png"
+                                    class="img-fluid rounded-4">
+                                <div class="p-2">
+                                    <div class="fw-bold text-black pb-2">PHP & Bootstrap : Aplikasi Keuangan</div>
+                                    <div class="text-primary pb-2">Gratis</div>
+                                    <div class="d-flex align-items-end">
+                                        <div>
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                            <img src="assets/img/icon/star.png">
+                                        </div>
+                                        <div class="ms-2">(34)</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="bg-white rounded-4 p-4">
+                            <a href="sourcecode.html" class="text-decoration-none">
+                                <img src="assets/img/kelas3.png"
                                     class="img-fluid rounded-4">
                                 <div class="p-2">
                                     <div class="fw-bold text-black pb-2">PHP Laravel8 & Bootstrap : Aplikasi Pemesanan
@@ -465,34 +489,10 @@
                     <div class="col">
                         <div class="bg-white rounded-4 p-4">
                             <a href="sourcecode.html" class="text-decoration-none">
-                                <img src="https://via.placeholder.com/500x300.png?text=500x300"
+                                <img src="assets/img/kelas2.png"
                                     class="img-fluid rounded-4">
                                 <div class="p-2">
-                                    <div class="fw-bold text-black pb-2">PHP Laravel8 & Bootstrap : Aplikasi Pemesanan
-                                        Tiket</div>
-                                    <div class="text-primary pb-2">Gratis</div>
-                                    <div class="d-flex align-items-end">
-                                        <div>
-                                            <img src="assets/img/icon/star.png">
-                                            <img src="assets/img/icon/star.png">
-                                            <img src="assets/img/icon/star.png">
-                                            <img src="assets/img/icon/star.png">
-                                            <img src="assets/img/icon/star.png">
-                                        </div>
-                                        <div class="ms-2">(34)</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="bg-white rounded-4 p-4">
-                            <a href="sourcecode.html" class="text-decoration-none">
-                                <img src="https://via.placeholder.com/500x300.png?text=500x300"
-                                    class="img-fluid rounded-4">
-                                <div class="p-2">
-                                    <div class="fw-bold text-black pb-2">PHP Laravel8 & Bootstrap : Aplikasi Pemesanan
-                                        Tiket</div>
+                                    <div class="fw-bold text-black pb-2">PHP Codeigniter & Bootstrap : Aplikasi Klinik</div>
                                     <div class="text-black pb-2">Rp 250.000</div>
                                     <div class="d-flex align-items-end">
                                         <div>
@@ -502,7 +502,7 @@
                                             <img src="assets/img/icon/star.png">
                                             <img src="assets/img/icon/star.png">
                                         </div>
-                                        <div class="ms-2">(34)</div>
+                                        <div class="ms-2">(209)</div>
                                     </div>
                                 </div>
                             </a>
@@ -531,14 +531,41 @@
                                 <div class="scroll-parent">
                                     <div class="scroll-element utama">
                                         <div class="bg-white rounded-4 p-4 my-3">
-                                            <div class="fw-bold text-black fs-5">Banyak Pilihan</div>
-                                            <div class="fw-light text-grey pt-2">Bergabung bersama kami untuk menemukan
-                                                solusi dari permasalahan sistem anda.</div>
+                                            <div class="fw-bold text-black fs-5">Lebih Cepat Dipelajari</div>
+                                            <div class="fw-light text-grey pt-2">Source code yang diberikan sangat lengkap dari step awal hingga akhir.</div>
                                             <div class="d-flex align-items-center pt-3">
-                                                <img src="https://via.placeholder.com/50x50.png?text=50x50"
+                                                <img src="assets/img/avatars/1.webp"
                                                     class="img-fluid rounded-circle">
                                                 <div class="ps-2">
                                                     <div class="fw-bold text-black" style="font-size: 14px;">Rinny
+                                                    </div>
+                                                    <div class="fw-light text-grey" style="font-size: 14px;">Mahasiswa
+                                                        Tingkat Akhir</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white rounded-4 p-4 my-3">
+                                            <div class="fw-bold text-black fs-5">Tips Sangat Membantu</div>
+                                            <div class="fw-light text-grey pt-2">Tugas sekolah jadi terasa tidak terlalu sulit jika dilihat dari tips yang diberikan.</div>
+                                            <div class="d-flex align-items-center pt-3">
+                                                <img src="assets/img/avatars/2.webp"
+                                                    class="img-fluid rounded-circle">
+                                                <div class="ps-2">
+                                                    <div class="fw-bold text-black" style="font-size: 14px;">Andrew
+                                                    </div>
+                                                    <div class="fw-light text-grey" style="font-size: 14px;">Mahasiswa
+                                                        Tingkat Akhir</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white rounded-4 p-4 my-3">
+                                            <div class="fw-bold text-black fs-5">Recomended</div>
+                                            <div class="fw-light text-grey pt-2">Jadi tidak takut untuk merekomendasikan kepada teman-teman yang membutuhkan.</div>
+                                            <div class="d-flex align-items-center pt-3">
+                                                <img src="assets/img/avatars/3.webp"
+                                                    class="img-fluid rounded-circle">
+                                                <div class="ps-2">
+                                                    <div class="fw-bold text-black" style="font-size: 14px;">Judi
                                                     </div>
                                                     <div class="fw-light text-grey" style="font-size: 14px;">Mahasiswa
                                                         Tingkat Akhir</div>
@@ -550,40 +577,10 @@
                                             <div class="fw-light text-grey pt-2">Bergabung bersama kami untuk menemukan
                                                 solusi dari permasalahan sistem anda.</div>
                                             <div class="d-flex align-items-center pt-3">
-                                                <img src="https://via.placeholder.com/50x50.png?text=50x50"
+                                                <img src="assets/img/avatars/4.webp"
                                                     class="img-fluid rounded-circle">
                                                 <div class="ps-2">
-                                                    <div class="fw-bold text-black" style="font-size: 14px;">Rinny
-                                                    </div>
-                                                    <div class="fw-light text-grey" style="font-size: 14px;">Mahasiswa
-                                                        Tingkat Akhir</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="bg-white rounded-4 p-4 my-3">
-                                            <div class="fw-bold text-black fs-5">Banyak Pilihan</div>
-                                            <div class="fw-light text-grey pt-2">Bergabung bersama kami untuk menemukan
-                                                solusi dari permasalahan sistem anda.</div>
-                                            <div class="d-flex align-items-center pt-3">
-                                                <img src="https://via.placeholder.com/50x50.png?text=50x50"
-                                                    class="img-fluid rounded-circle">
-                                                <div class="ps-2">
-                                                    <div class="fw-bold text-black" style="font-size: 14px;">Rinny
-                                                    </div>
-                                                    <div class="fw-light text-grey" style="font-size: 14px;">Mahasiswa
-                                                        Tingkat Akhir</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="bg-white rounded-4 p-4 my-3">
-                                            <div class="fw-bold text-black fs-5">Banyak Pilihan</div>
-                                            <div class="fw-light text-grey pt-2">Bergabung bersama kami untuk menemukan
-                                                solusi dari permasalahan sistem anda.</div>
-                                            <div class="d-flex align-items-center pt-3">
-                                                <img src="https://via.placeholder.com/50x50.png?text=50x50"
-                                                    class="img-fluid rounded-circle">
-                                                <div class="ps-2">
-                                                    <div class="fw-bold text-black" style="font-size: 14px;">Rinny
+                                                    <div class="fw-bold text-black" style="font-size: 14px;">Ronald
                                                     </div>
                                                     <div class="fw-light text-grey" style="font-size: 14px;">Mahasiswa
                                                         Tingkat Akhir</div>
@@ -597,14 +594,14 @@
                                 <div class="scroll-parent">
                                     <div class="scroll-element kedua">
                                         <div class="bg-white rounded-4 p-4 my-3">
-                                            <div class="fw-bold text-black fs-5">Banyak Pilihan</div>
+                                            <div class="fw-bold text-black fs-5">Pengganti Tatap Muka</div>
                                             <div class="fw-light text-grey pt-2">Bergabung bersama kami untuk menemukan
                                                 solusi dari permasalahan sistem anda.</div>
                                             <div class="d-flex align-items-center pt-3">
-                                                <img src="https://via.placeholder.com/50x50.png?text=50x50"
+                                                <img src="assets/img/avatars/3.webp"
                                                     class="img-fluid rounded-circle">
                                                 <div class="ps-2">
-                                                    <div class="fw-bold text-black" style="font-size: 14px;">Rinny
+                                                    <div class="fw-bold text-black" style="font-size: 14px;">Alex
                                                     </div>
                                                     <div class="fw-light text-grey" style="font-size: 14px;">Mahasiswa
                                                         Tingkat Akhir</div>
@@ -612,14 +609,13 @@
                                             </div>
                                         </div>
                                         <div class="bg-white rounded-4 p-4 my-3">
-                                            <div class="fw-bold text-black fs-5">Banyak Pilihan</div>
-                                            <div class="fw-light text-grey pt-2">Bergabung bersama kami untuk menemukan
-                                                solusi dari permasalahan sistem anda.</div>
+                                            <div class="fw-bold text-black fs-5">Mudah Dipahami</div>
+                                            <div class="fw-light text-grey pt-2">Sangat cocok untuk orang awam seperti saya mempelajari ini dari awal.</div>
                                             <div class="d-flex align-items-center pt-3">
-                                                <img src="https://via.placeholder.com/50x50.png?text=50x50"
+                                                <img src="assets/img/avatars/5.webp"
                                                     class="img-fluid rounded-circle">
                                                 <div class="ps-2">
-                                                    <div class="fw-bold text-black" style="font-size: 14px;">Rinny
+                                                    <div class="fw-bold text-black" style="font-size: 14px;">Skidrow
                                                     </div>
                                                     <div class="fw-light text-grey" style="font-size: 14px;">Mahasiswa
                                                         Tingkat Akhir</div>
@@ -627,14 +623,13 @@
                                             </div>
                                         </div>
                                         <div class="bg-white rounded-4 p-4 my-3">
-                                            <div class="fw-bold text-black fs-5">Banyak Pilihan</div>
-                                            <div class="fw-light text-grey pt-2">Bergabung bersama kami untuk menemukan
-                                                solusi dari permasalahan sistem anda.</div>
+                                            <div class="fw-bold text-black fs-5">Tidak Sulit Untuk Diikuti</div>
+                                            <div class="fw-light text-grey pt-2">Pembelajaran cocok untuk pemula dengan materi yang sangat bagus.</div>
                                             <div class="d-flex align-items-center pt-3">
-                                                <img src="https://via.placeholder.com/50x50.png?text=50x50"
+                                                <img src="assets/img/avatars/1.webp"
                                                     class="img-fluid rounded-circle">
                                                 <div class="ps-2">
-                                                    <div class="fw-bold text-black" style="font-size: 14px;">Rinny
+                                                    <div class="fw-bold text-black" style="font-size: 14px;">Brew
                                                     </div>
                                                     <div class="fw-light text-grey" style="font-size: 14px;">Mahasiswa
                                                         Tingkat Akhir</div>
@@ -642,14 +637,13 @@
                                             </div>
                                         </div>
                                         <div class="bg-white rounded-4 p-4 my-3">
-                                            <div class="fw-bold text-black fs-5">Banyak Pilihan</div>
-                                            <div class="fw-light text-grey pt-2">Bergabung bersama kami untuk menemukan
-                                                solusi dari permasalahan sistem anda.</div>
+                                            <div class="fw-bold text-black fs-5">Materi Update</div>
+                                            <div class="fw-light text-grey pt-2">Materi yang disediakan merupakan materi yang relate dengan pembelajaran saat ini.</div>
                                             <div class="d-flex align-items-center pt-3">
-                                                <img src="https://via.placeholder.com/50x50.png?text=50x50"
+                                                <img src="assets/img/avatars/2.webp"
                                                     class="img-fluid rounded-circle">
                                                 <div class="ps-2">
-                                                    <div class="fw-bold text-black" style="font-size: 14px;">Rinny
+                                                    <div class="fw-bold text-black" style="font-size: 14px;">Hans
                                                     </div>
                                                     <div class="fw-light text-grey" style="font-size: 14px;">Mahasiswa
                                                         Tingkat Akhir</div>
@@ -677,7 +671,7 @@
                 <div class="row gx-4 pt-4">
                     <div class="col">
                         <div class="p-4">
-                            <img src="https://via.placeholder.com/150x150.png?text=150x150"
+                            <img src="assets/img/avatars/tim1.png"
                                 class="img-fluid rounded-circle">
                             <div class="pt-3">
                                 <div class="fw-bold fs-3 text-black">T.A.P</div>
