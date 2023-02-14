@@ -9,4 +9,11 @@ class Hdr extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'is_admin',
+        'username',
+    ];
 }

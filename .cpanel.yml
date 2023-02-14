@@ -1,6 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/u2495756/hendebro/
-    # - /bin/cp index.html $DEPLOYPATH
-    # - /bin/cp style.css $DEPLOYPATH

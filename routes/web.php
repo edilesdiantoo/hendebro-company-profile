@@ -2,7 +2,6 @@
 
 use App\Models\Hdr;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\MNGContentController;
@@ -26,74 +25,65 @@ Route::get('/', function () {
     return view('home', compact('get_hdr_data', 'active'));
 });
 
-Route::get('/clear-cache', function () {
-    $exitCode = Artisan::call('cache:clear');
-    echo $exitCode;
+Route::controller(LoginController::class)->group(function () {
+    Route::get('/login', 'index')->name('login')->middleware('guest');
+    Route::post('/login', 'authenticate');
 });
 
-Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
-Route::post('/login', [LoginController::class, 'authenticate']);
-Route::post('/logout', [LoginController::class, 'logout']);
+Route::controller(MasterController::class)->group(function () {
+    //User Master
+    Route::get('/master/user', 'user');
+    Route::get('/showUser', 'showUser');
+    Route::get('/tambahUser', 'tambahUser');
+    Route::get('/simpanUser', 'simpanUser');
+    Route::get('/fetch_data', 'fetch_data');
+    Route::get('/editUser/{id}', 'editUser');
+    Route::get('/simpanEditUser/{id}', 'simpanEditUser');
+    Route::get('/deleteUser/{id}', 'deleteUser');
+    Route::get('/getSearch/{id}', 'getSearch');
 
-//master
+    //Category Master
+    Route::get('/master/category', 'category');
+    Route::get('/showCategory', 'showCategory');
+    Route::get('/tambahCategory', 'tambahCategory');
+    Route::get('/simpanCategory', 'simpanCategory');
+    Route::get('/fetch_category', 'fetch_category');
+    Route::get('/editCategory/{id}', 'editCategory');
+    Route::get('/simpanEditCategory/{id}', 'simpanEditCategory');
+    Route::get('/deleteCategory/{id}', 'deleteCategory');
+    Route::get('/getSearchCategory/{id}', 'getSearchCategory');
+});
 
-Route::get('/master/user', [MasterController::class, 'user']);
-Route::get('/showUser', [MasterController::class, 'showUser']);
-Route::get('/tambahUser', [MasterController::class, 'tambahUser']);
-Route::get('/simpanUser', [MasterController::class, 'simpanUser']);
-Route::get('/show', [MasterController::class, 'show']);
-Route::get('/fetch_data', [MasterController::class, 'fetch_data']);
-Route::get('/editUser/{id}', [MasterController::class, 'editUser']);
-Route::get('/simpanEditUser/{id}', [MasterController::class, 'simpanEditUser']);
-Route::get('/deleteUser/{id}', [MasterController::class, 'deleteUser']);
-Route::get('/getSearch/{id}', [MasterController::class, 'getSearch']);
-Route::get('master/category', [MasterController::class, 'category']);
-Route::get('/showCategory', [MasterController::class, 'showCategory']);
-Route::get('/fetch_category', [MasterController::class, 'fetch_category']);
-Route::get('/tambahCategory', [MasterController::class, 'tambahCategory']);
-Route::get('/simpanCategory', [MasterController::class, 'simpanCategory']);
-Route::get('/editCategory/{id}', [MasterController::class, 'editCategory']);
-Route::get('/simpanEditCategory/{id}', [MasterController::class, 'simpanEditCategory']);
-Route::get('/deleteCategory/{id}', [MasterController::class, 'deleteCategory']);
-Route::get('/getSearchCategory/{id}', [MasterController::class, 'getSearchCategory']);
+Route::controller(MNGContentController::class)->group(function () {
+    //Menu Conten Landing Page
+    Route::get('/MngContent/menucontent', 'menucontent');
+    Route::get('/showMenuContent', 'showMenuContent');
+    Route::get('/tambahMenuContent', 'tambahMenuContent');
+    Route::get('/simpanMenuContent', 'simpanMenuContent');
+    Route::get('/editMenuContent/{id}', 'editMenuContent');
+    Route::get('/simpanEditMenuContent/{id}', 'simpanEditMenuContent');
+    Route::get('/deleteMenuConten/{id}', 'deleteMenuConten');
+    Route::get('/getSearchMenu/{id}', 'getSearchMenu');
 
+    //Blog
+    Route::get('/MngContent/blog', 'blog');
+    Route::get('/showBlog', 'showBlog');
+    Route::get('/tambahBlog', 'tambahBlog');
+    Route::post('/simpanBlog', 'simpanBlog');
+    Route::get('/fetch_blog', 'fetch_blog');
+    Route::get('/editBlog/{id}', 'editBlog');
+    Route::get('/simpanBlogEdit/{id}', 'simpanBlogEdit');
+    Route::get('/deleteBlog/{id}', 'deleteBlog');
+    Route::get('/getSearchMenu/{id}', 'getSearchMenu');
 
-// management content
-//menu hdr
-Route::get('/MngContent/hdr', [MNGContentController::class, 'hdr']);
-Route::get('/showMenuHdr', [MNGContentController::class, 'showMenuHdr']);
-Route::get('/tambahMenuHdr', [MNGContentController::class, 'tambahMenuHdr']);
-Route::get('/simpanMenuHdr', [MNGContentController::class, 'simpanMenuHdr']);
-Route::get('/editMenuHdr/{id}', [MNGContentController::class, 'editMenuHdr']);
-Route::get('/simpanEditMenuHdr/{id}', [MNGContentController::class, 'simpanEditMenuHdr']);
-Route::get('/deleteMenuHdr/{id}', [MNGContentController::class, 'deleteMenuHdr']);
-
-//menu content
-Route::get('/MngContent/menucontent', [MNGContentController::class, 'menucontent']);
-Route::get('/showMenuContent', [MNGContentController::class, 'showMenuContent']);
-Route::get('/tambahMenuContent', [MNGContentController::class, 'tambahMenuContent']);
-Route::get('/simpanMenuContent', [MNGContentController::class, 'simpanMenuContent']);
-Route::get('/editMenuContent/{id}', [MNGContentController::class, 'editMenuContent']);
-Route::get('/simpanEditMenuContent/{id}', [MNGContentController::class, 'simpanEditMenuContent']);
-Route::get('/deleteMenuContent/{id}', [MNGContentController::class, 'deleteMenuContent']);
-Route::get('/getSearchMenu/{id}', [MNGContentController::class, 'getSearchMenu']);
-
-//blog
-Route::get('/MngContent/blog', [MNGContentController::class, 'blog']);
-Route::get('/showBlog', [MNGContentController::class, 'showBlog']);
-Route::get('/tambahBlog', [MNGContentController::class, 'tambahBlog']);
-Route::post('/simpanBlog', [MNGContentController::class, 'simpanBlog']);
-Route::get('/fetch_blog', [MNGContentController::class, 'fetch_blog']);
-Route::get('/deleteBlog/{id}', [MNGContentController::class, 'deleteBlog']);
-Route::get('/editBlog/{id}', [MNGContentController::class, 'editBlog']);
-Route::post('/simpanBlogEdit', [MNGContentController::class, 'simpanBlogEdit']);
-
-//sourceCode
-Route::get('/MngContent/scode', [MNGContentController::class, 'scode']);
-Route::get('/showScode', [MNGContentController::class, 'showScode']);
-Route::get('/tambahScode', [MNGContentController::class, 'tambahScode']);
-Route::post('/simpanScode', [MNGContentController::class, 'simpanScode']);
-Route::get('/fetch_scode', [MNGContentController::class, 'fetch_scode']);
-Route::get('/editScode/{id}', [MNGContentController::class, 'editScode']);
-Route::post('/simpanScode', [MNGContentController::class, 'simpanScode']);
-Route::get('/deleteScode/{id}', [MNGContentController::class, 'deleteScode']);
+    // Source Code
+    Route::get('/MngContent/scode', 'scode');
+    Route::get('/showScode', 'showScode');
+    Route::get('/tambahScode', 'tambahScode');
+    Route::get('/editScode/{id}', 'editScode');
+    Route::post('/simpanScode', 'simpanScode');
+    // Route::get('/fetch_blog', 'fetch_blog');
+    // Route::get('/simpanBlogEdit/{id}', 'simpanBlogEdit');
+    // Route::get('/deleteBlog/{id}', 'deleteBlog');
+    // Route::get('/getSearchMenu/{id}', 'getSearchMenu');
+});

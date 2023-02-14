@@ -132,9 +132,9 @@
                     cache: false,
                     processData: false,
                     success: function(data) {
-                        console.log(data);
-                        // $('.close').click();
-                        // showBlog()
+                        // console.log(data);
+                        $('.close').click();
+                        showBlog()
                         // $('#message').css('display', 'block');
                         // $('#message').html(data.success);
                         // $('#message').addClass(data.class_name);

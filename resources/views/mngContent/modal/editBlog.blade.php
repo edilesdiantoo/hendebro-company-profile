@@ -1,7 +1,6 @@
 <div class="row">
     <div class="col mb-3">
         <label for="hdr_name" class="form-label">Judul</label>
-        <input type="hidden" name="hit" id="hit" value="1">
         <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
         <input type="hidden" name="id" id="id" value="{{ $getBlog->id }}">
         <input type="text" name="judul" id="judul" class="form-control @error('judul') is-invalid @enderror"

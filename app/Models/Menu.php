@@ -9,10 +9,4 @@ class Menu extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
-    protected $fillable = [
-        'name',
-        'category_menu_id',
-        'status',
-        'keterangan',
-    ];
 }

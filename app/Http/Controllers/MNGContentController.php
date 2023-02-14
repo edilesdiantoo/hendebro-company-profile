@@ -6,13 +6,10 @@ use App\Models\Hdr;
 use App\Models\Blog;
 use App\Models\Menu;
 use App\Models\Category;
-use Illuminate\Support\Str;
-use App\Models\CategoryMenu;
+use App\Models\SourceCode;
 use Illuminate\Http\Request;
+use App\Models\Category_menu;
 use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\User;
-use Illuminate\Validation\Validator;
 use Illuminate\Support\Facades\Storage;
 
 class MNGContentController extends Controller
@@ -37,7 +34,7 @@ class MNGContentController extends Controller
 
     public function tambahMenuContent()
     {
-        $getCategoryMenu = CategoryMenu::all();
+        $getCategoryMenu = Category_menu::all();
         return view('mngContent.modal.tambahMenuContent', compact('getCategoryMenu'));
     }
 
@@ -55,7 +52,7 @@ class MNGContentController extends Controller
     public function editMenuContent($id)
     {
         $getMenuContent = Menu::findOrFail($id);
-        $getCategoryMenu = CategoryMenu::all();
+        $getCategoryMenu = Category_menu::all();
 
         return view('mngContent.modal.editMenuContent', compact('getMenuContent', 'getCategoryMenu'))->render();
     }
@@ -105,8 +102,8 @@ class MNGContentController extends Controller
     public function showBlog()
     {
         $getBlog = DB::table('blogs')
-            ->select('blogs.*', 'hdrs.hdr_name', 'categories.name as category_name')
-            ->leftJoin('hdrs', 'hdrs.id', 'blogs.hdr_id')
+            ->select('blogs.*', 'menus.name as menu_name', 'categories.name as category_name')
+            ->leftJoin('menus', 'menus.id', 'blogs.menu_id')
             ->leftJoin('categories', 'categories.id', 'blogs.category_id')
             ->latest()->paginate(5);
         // dd($getBlog);
@@ -115,7 +112,7 @@ class MNGContentController extends Controller
 
     public function tambahBlog()
     {
-        $get_hdr_data = Hdr::all();
+        $get_hdr_data = Menu::all();
         $get_category_data = Category::all();
         return view('mngContent.modal.tambahBlog', compact('get_category_data', 'get_hdr_data'))->render();
     }
@@ -126,7 +123,7 @@ class MNGContentController extends Controller
             [
                 'judul'       => 'required',
                 'category_id' => 'required',
-                'hdr_id'      => 'required',
+                'menu_id'      => 'required',
                 'hit'         => 'required',
                 'image'      => 'image|file|max:10000',
             ]
@@ -217,11 +214,48 @@ class MNGContentController extends Controller
     {
 
         $getScode = DB::table('source_codes')
-            ->select('source_codes.*', 'hdrs.hdr_name', 'categories.name as category_name')
-            ->leftJoin('hdrs', 'hdrs.id', 'source_codes.hdr_id')
+            ->select('source_codes.*', 'menus.name as menu_name', 'categories.name as category_name')
+            ->leftJoin('menus', 'menus.id', 'source_codes.menu_id')
             ->leftJoin('categories', 'categories.id', 'source_codes.category_id')
             ->latest()->paginate(5);
         // dd($getScode);
         return view('mngContent.modal.showScode', compact('getScode'));
+    }
+
+    public function tambahScode()
+    {
+        $get_hdr_data = Menu::all();
+        $get_category_data = Category::all();
+        return view('mngContent.modal.tambahScode', compact('get_category_data', 'get_hdr_data'))->render();
+    }
+
+    public function simpanScode(Request $request)
+    {
+        $validatedData = $request->validate(
+            [
+                'judul'       => 'required',
+                'sub_judul'   => 'required',
+                'category_id' => 'required',
+                'menu_id'     => 'required',
+                'keterangan'  => 'required',
+                'image'       => 'image|file|max:10000',
+            ]
+        );
+
+        if ($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('post-source-code');
+        }
+
+        $blog_insert = SourceCode::create($validatedData);
+        return Response()->json($blog_insert);
+    }
+
+    public function editScode($id)
+    {
+        $getCategoty = Category::all();
+        $getScode = SourceCode::findOrFail($id);
+        $getMenuHdr = Hdr::all();
+
+        return view('mngContent.modal.editScode', compact('getScode', 'getCategoty', 'getMenuHdr'))->render();
     }
 }

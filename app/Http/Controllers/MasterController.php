@@ -4,12 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Category;
-use App\Models\ModelMaster;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-
 
 class MasterController extends Controller
 {
@@ -26,17 +23,11 @@ class MasterController extends Controller
         $getUser = User::latest()->paginate(5);
         $rank = $getUser->firstItem();
         $test_join = DB::table('users')
-            ->select('users.*', 'level_user.level_name')
-            ->leftJoin('level_user', 'level_user.id', 'users.is_admin')
+            ->select('users.*', 'level_users.level_name')
+            ->leftJoin('level_users', 'level_users.id', 'users.is_admin')
             ->latest()->paginate(5);
         // dd($test_join);
         return view('master.modal.showUser', compact('getUser', 'test_join', 'rank'));
-        // return view('master.modal.showUser', [
-        //     'getUser' => User::latest()
-        //         // ->Filter(request(['search', 'name', 'username']))
-        //         ->paginate(5)
-        //     // ->withQueryString(),
-        // ]);
     }
 
     public function fetch_data(Request $request)
@@ -45,8 +36,8 @@ class MasterController extends Controller
             $getUser = User::latest()->paginate(5);
             $rank = $getUser->firstItem();
             $test_join = DB::table('users')
-                ->select('users.*', 'level_user.level_name')
-                ->leftJoin('level_user', 'level_user.id', 'users.is_admin')
+                ->select('users.*', 'level_users.level_name')
+                ->leftJoin('level_users', 'level_users.id', 'users.is_admin')
                 ->latest()->paginate(5);
             return view('master.modal.showUser', compact('getUser', 'test_join', 'rank'))->render();
         }
@@ -54,9 +45,9 @@ class MasterController extends Controller
 
     public function tambahUser()
     {
-        $getLevelUser = DB::table('level_user')
+        $getLevelUser = DB::table('level_users')
             ->select('level_name', 'id')
-            ->from('level_user')
+            ->from('level_users')
             ->get();
         // dd($getLevelUser);
         return view('master.modal.tambahUser', compact('getLevelUser'));
@@ -82,9 +73,9 @@ class MasterController extends Controller
     public function editUser($id)
     {
         $getUserEdit = User::findOrFail($id);
-        $getLevelUser = DB::table('level_user')
+        $getLevelUser = DB::table('level_users')
             ->select('level_name', 'id')
-            ->from('level_user')
+            ->from('level_users')
             ->get();
         return view('master.modal.editUser', compact('getUserEdit', 'getLevelUser'))->render();
     }
@@ -107,7 +98,6 @@ class MasterController extends Controller
             ->update($rules);
 
         return response()->json($saveEdit, 200);
-        // ModelMaster::insert($validatedData);
     }
 
     public function deleteUser($id)
@@ -122,8 +112,8 @@ class MasterController extends Controller
         $getUser = User::latest()->paginate(5);
         $rank = $getUser->firstItem();
         $test_join = DB::table('users')
-            ->select('users.*', 'level_user.level_name')
-            ->leftJoin('level_user', 'level_user.id', 'users.is_admin')
+            ->select('users.*', 'level_users.level_name')
+            ->leftJoin('level_users', 'level_users.id', 'users.is_admin')
             ->where('users.name', 'LIKE', '%' . $search . '%')
             ->latest()->paginate(5);
         // dd($test_join);
@@ -142,12 +132,6 @@ class MasterController extends Controller
     public function showCategory()
     {
         $getCategory = Category::latest()->paginate(5);
-        // $rank = $getCategory->firstItem();
-        // $test_join = DB::table('users')
-        //     ->select('users.*', 'level_user.level_name')
-        //     ->leftJoin('level_user', 'level_user.id', 'users.is_admin')
-        //     ->latest()->paginate(5);
-        // dd($getCategory);
 
         return view('master.modal.showCategory', compact('getCategory'));
     }
@@ -156,22 +140,12 @@ class MasterController extends Controller
     {
         if ($request->ajax()) {
             $getCategory = Category::latest()->paginate(5);
-            // $rank = $getCategory->firstItem();
-            // $test_join = DB::table('users')
-            //     ->select('users.*', 'level_user.level_name')
-            //     ->leftJoin('level_user', 'level_user.id', 'users.is_admin')
-            //     ->latest()->paginate(5);
             return view('master.modal.showUser', compact('getCategory'))->render();
         }
     }
 
     public function tambahCategory()
     {
-        // $getLevelUser = DB::table('level_user')
-        //     ->select('level_name', 'id')
-        //     ->from('level_user')
-        //     ->get();
-        // dd($getLevelUser);
         return view('master.modal.tambahCategory');
     }
 
@@ -192,10 +166,6 @@ class MasterController extends Controller
     public function editCategory($id)
     {
         $getCategoryEdit = Category::findOrFail($id);
-        // $getLevelUser = DB::table('level_user')
-        //     ->select('level_name', 'id')
-        //     ->from('level_user')
-        //     ->get();
         return view('master.modal.editCategory', compact('getCategoryEdit'))->render();
     }
 
@@ -212,22 +182,16 @@ class MasterController extends Controller
             ->update($rules);
 
         return response()->json($saveEdit, 200);
-        // ModelMaster::insert($validatedData);
     }
 
     public function deleteCategory($id)
     {
-        // $data = User::findOrFail($id);
         $hapusUser = Category::destroy($id);
         return response()->json($hapusUser, 200);
     }
 
     public function getSearchCategory($search)
     {
-        // $getCategoryData = Category::take(10)->skip(10)->get();
-        // if (isset($search) ? $search : false) {
-        //     $getCategoryData->where('name', 'like', '%' . $search . '%');
-        // } //sama dengan yang dibawah
         $getCategory =  DB::table('categories')
             ->select('*')
             ->where('name', 'LIKE', '%' . $search . '%')

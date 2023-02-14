@@ -17,7 +17,7 @@
                     {{ $key + $getBlog->firstItem() }}
                 </td>
                 <td>{{ $blog->judul }}</td>
-                <td>{{ $blog->hdr_name }}</td>
+                <td>{{ $blog->menu_name }}</td>
                 <td>{{ $blog->category_name }}</td>
                 <td>
                     {{-- <img src="{{ asset('storage/' . $blog->image) }}" alt=""> --}}

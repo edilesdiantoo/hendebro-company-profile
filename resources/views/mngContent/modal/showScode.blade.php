@@ -17,7 +17,7 @@
                     {{ $key + $getScode->firstItem() }}
                 </td>
                 <td>{{ $scode->judul }}</td>
-                <td>{{ $scode->hdr_name }}</td>
+                <td>{{ $scode->menu_name }}</td>
                 <td>{{ $scode->category_name }}</td>
                 <td>
                     {{-- <img src="{{ asset('storage/' . $scode->image) }}" alt=""> --}}

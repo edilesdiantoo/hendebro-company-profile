@@ -24,10 +24,10 @@
 <div class="row">
     <div class="col mb-3">
         <label for="hdr_id" class="form-label">Header Menu</label>
-        <select class="form-select" id="hdr_id" name="hdr_id">
+        <select class="form-select" id="menu_id" name="menu_id">
             <option value="">Pilih</option>
             @foreach ($get_hdr_data as $key => $hdr)
-                <option value="{{ $hdr->id }}">{{ $hdr->hdr_name }}</option>
+                <option value="{{ $hdr->id }}">{{ $hdr->name }}</option>
             @endforeach
         </select>
     </div>
