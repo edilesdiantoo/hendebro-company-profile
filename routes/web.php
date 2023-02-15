@@ -1,7 +1,11 @@
 <?php
 
 use App\Models\Hdr;
+use App\Models\Blog;
+use App\Models\Menu;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\MNGContentController;
@@ -20,14 +24,23 @@ use App\Http\Controllers\MNGContentController;
 Route::get('/', function () {
     $title = "Home";
     $active    = "home";
-    $get_hdr_data = Hdr::all();
-    // dd($get_hdr_data);
-    return view('home', compact('get_hdr_data', 'active'));
+    $get_menu_landing = Menu::all();
+    $getBlog = Blog::all();
+    // dd($get_menu_landing);
+    return view('home', compact('get_menu_landing', 'getBlog', 'active'));
 });
 
 Route::controller(LoginController::class)->group(function () {
     Route::get('/login', 'index')->name('login')->middleware('guest');
     Route::post('/login', 'authenticate');
+});
+
+Route::get('/foo', function () {
+    File::link(
+        storage_path('app/public'),
+        public_path('storage')
+    );
+    echo "hahh";
 });
 
 Route::controller(MasterController::class)->group(function () {
@@ -82,8 +95,8 @@ Route::controller(MNGContentController::class)->group(function () {
     Route::get('/tambahScode', 'tambahScode');
     Route::get('/editScode/{id}', 'editScode');
     Route::post('/simpanScode', 'simpanScode');
+    Route::get('/simpanScodeEdit/{id}', 'simpanScodeEdit');
     // Route::get('/fetch_blog', 'fetch_blog');
-    // Route::get('/simpanBlogEdit/{id}', 'simpanBlogEdit');
     // Route::get('/deleteBlog/{id}', 'deleteBlog');
     // Route::get('/getSearchMenu/{id}', 'getSearchMenu');
 });

@@ -35,6 +35,13 @@
         </select>
     </div>
 </div>
+<div class="row">
+    <div class="col mb-3">
+        <label for="keterangan" class="form-label">Keterangan</label>
+        <input type="text" id="keterangan" class="form-control" placeholder="Keterangan"
+            value="{{ $getBlog->keterangan }}" />
+    </div>
+</div>
 <div class="mb-3">
     <img class="img-preview img-fluid mb-3 col-sm-5">
     <input type="hidden" name="oldImage" value="{{ $getBlog->image }}">

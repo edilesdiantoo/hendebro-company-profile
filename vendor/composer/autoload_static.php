@@ -520,6 +520,7 @@ class ComposerStaticInitf67a907d889940120160fc10874a727e
         'App\\Http\\Controllers\\MNGContentController' => __DIR__ . '/../..' . '/app/Http/Controllers/MNGContentController.php',
         'App\\Http\\Controllers\\MasterController' => __DIR__ . '/../..' . '/app/Http/Controllers/MasterController.php',
         'App\\Http\\Controllers\\MenuController' => __DIR__ . '/../..' . '/app/Http/Controllers/MenuController.php',
+        'App\\Http\\Controllers\\SourceCodeController' => __DIR__ . '/../..' . '/app/Http/Controllers/SourceCodeController.php',
         'App\\Http\\Controllers\\User' => __DIR__ . '/../..' . '/app/Http/Controllers/User.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',

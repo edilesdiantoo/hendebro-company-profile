@@ -27,9 +27,9 @@
                         <a href="" class=""><img src="assets/img/logo/logo-v3.png"
                                 style="width: 50px; height: 50px;"></a>
                         <div class="ms-auto">
-                            @foreach ($get_hdr_data as $key => $hdr)
+                            @foreach ($get_menu_landing as $key => $menu)
                                 <a href=""
-                                    class="text-white text-decoration-none px-4 fw-semibold">{{ $hdr->hdr_name }}</a>
+                                    class="text-white text-decoration-none px-4 fw-semibold">{{ $menu->name }}</a>
                                 {{-- <a href="" class="text-white text-decoration-none px-4 fw-semibold">Source Code</a>
                             <a href="" class="text-white text-decoration-none px-4 fw-semibold">Hosting</a>
                             <a href="" class="text-white text-decoration-none px-4 fw-semibold">Product</a> --}}
@@ -71,56 +71,56 @@
                             </div>
                         </div>
                     </div>
-        <div class="col-7 text-end">
-          <div style="position: relative;">
-            <div>
-              <img src="assets/img/main1.png" class="animatedimg rounded-4">
-            </div>
-            <div class="position-absolute" style="top: 55%; right: -5%;">
-              <img src="assets/img/main-1.png" class="animatedimg-2">
-            </div>
-            <div class="position-absolute" style="top: 68%; right: -5%;">
-              <img src="assets/img/main-2.png" class="animatedimg-3">
-            </div>
-            <div class="position-absolute" style="top: 81%; right: -5%;">
-              <img src="assets/img/main-3.png" class="animatedimg-4">
-            </div>
-            <div class="position-absolute" style="top: 82%; right: -5%;">
-              <img src="assets/img/main-4.png" class="animatedimg-5">
-            </div>
-            <!-- check animated -->
+                    <div class="col-7 text-end">
+                        <div style="position: relative;">
+                            <div>
+                                <img src="assets/img/main1.png" class="animatedimg rounded-4">
+                            </div>
+                            <div class="position-absolute" style="top: 55%; right: -5%;">
+                                <img src="assets/img/main-1.png" class="animatedimg-2">
+                            </div>
+                            <div class="position-absolute" style="top: 68%; right: -5%;">
+                                <img src="assets/img/main-2.png" class="animatedimg-3">
+                            </div>
+                            <div class="position-absolute" style="top: 81%; right: -5%;">
+                                <img src="assets/img/main-3.png" class="animatedimg-4">
+                            </div>
+                            <div class="position-absolute" style="top: 82%; right: -5%;">
+                                <img src="assets/img/main-4.png" class="animatedimg-5">
+                            </div>
+                            <!-- check animated -->
 
-            <div class="position-absolute" style="top: 27%; right: 7%; z-index: 99;">
-              <div class="container-anim">
-                <div class="circle-border1"></div>
-                <div class="circle1">
-                  <div class="success"></div>
-                </div>
-              </div>
+                            <div class="position-absolute" style="top: 27%; right: 7%; z-index: 99;">
+                                <div class="container-anim">
+                                    <div class="circle-border1"></div>
+                                    <div class="circle1">
+                                        <div class="success"></div>
+                                    </div>
+                                </div>
 
-              <div class="container-anim">
-                <div class="circle-border2"></div>
-                <div class="circle2">
-                  <div class="success"></div>
-                </div>
-              </div>
+                                <div class="container-anim">
+                                    <div class="circle-border2"></div>
+                                    <div class="circle2">
+                                        <div class="success"></div>
+                                    </div>
+                                </div>
 
-              <div class="container-anim">
-                <div class="circle-border3"></div>
-                <div class="circle3">
-                  <div class="success"></div>
-                </div>
-              </div>
+                                <div class="container-anim">
+                                    <div class="circle-border3"></div>
+                                    <div class="circle3">
+                                        <div class="success"></div>
+                                    </div>
+                                </div>
 
-              <div class="container-anim">
-                <div class="circle-border4"></div>
-                <div class="circle4">
-                  <div class="success"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                                <div class="container-anim">
+                                    <div class="circle-border4"></div>
+                                    <div class="circle4">
+                                        <div class="success"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- <div class="col text-end">
           <img src="assets/img/anim-1.png" class="anim-1">
           <img src="assets/img/anim-2.png" class="anim-2">
@@ -205,50 +205,20 @@
                     </div>
                 </div>
                 <div class="row gx-4 pt-4">
-                    <div class="col">
-                        <div class="bg-white rounded-4 p-4">
-                            <a href="blog.html" class="text-decoration-none">
-                                <img src="assets/img/tips1.png"
-                                    class="img-fluid rounded-4">
-                                <div class="pt-3">
-                                    <div class="fw-bold text-black">UI / UX : Menggunakan Figma Sebagai Tools Utama
+                    @foreach ($getBlog as $key => $blog)
+                        <div class="col">
+                            <div class="bg-white rounded-4 p-4">
+                                <a href="#" class="text-decoration-none">
+                                    <img src="{{ asset('storage/' . $blog->image) }}" class="img-fluid rounded-4">
+                                    <div class="pt-3">
+                                        <div class="fw-bold text-black">{{ $blog->judul }}
+                                        </div>
+                                        <div class="fw-light text-grey">{{ $blog->keterangan }}</div>
                                     </div>
-                                    <div class="fw-light text-grey">Hello people spirit of learning! Dalam flutter
-                                        terdapat
-                                        widget elevated button yang...</div>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="bg-white rounded-4 p-4">
-                            <a href="blog.html" class="text-decoration-none">
-                                <img src="assets/img/tips2.png"
-                                    class="img-fluid rounded-4">
-                                <div class="pt-3">
-                                    <div class="fw-bold text-black">Laravel Tutorial : Cara membuat model pada blade
-                                    </div>
-                                    <div class="fw-light text-grey">Hello people spirit of learning! Dalam flutter
-                                        terdapat
-                                        widget elevated button yang</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="bg-white rounded-4 p-4">
-                            <a href="blog.html" class="text-decoration-none">
-                                <img src="assets/img/tips3.png"
-                                    class="img-fluid rounded-4">
-                                <div class="pt-3">
-                                    <div class="fw-bold text-black">HTML Tutorial : Mahir Menggunakan Tag HTML</div>
-                                    <div class="fw-light text-grey">Hello people spirit of learning! Dalam flutter
-                                        terdapat
-                                        widget elevated button yang</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -442,8 +412,7 @@
                     <div class="col">
                         <div class="bg-white rounded-4 p-4">
                             <a href="sourcecode.html" class="text-decoration-none">
-                                <img src="assets/img/kelas1.png"
-                                    class="img-fluid rounded-4">
+                                <img src="assets/img/kelas1.png" class="img-fluid rounded-4">
                                 <div class="p-2">
                                     <div class="fw-bold text-black pb-2">PHP & Bootstrap : Aplikasi Keuangan</div>
                                     <div class="text-primary pb-2">Gratis</div>
@@ -464,8 +433,7 @@
                     <div class="col">
                         <div class="bg-white rounded-4 p-4">
                             <a href="sourcecode.html" class="text-decoration-none">
-                                <img src="assets/img/kelas3.png"
-                                    class="img-fluid rounded-4">
+                                <img src="assets/img/kelas3.png" class="img-fluid rounded-4">
                                 <div class="p-2">
                                     <div class="fw-bold text-black pb-2">PHP Laravel8 & Bootstrap : Aplikasi Pemesanan
                                         Tiket</div>
@@ -489,10 +457,10 @@
                     <div class="col">
                         <div class="bg-white rounded-4 p-4">
                             <a href="sourcecode.html" class="text-decoration-none">
-                                <img src="assets/img/kelas2.png"
-                                    class="img-fluid rounded-4">
+                                <img src="assets/img/kelas2.png" class="img-fluid rounded-4">
                                 <div class="p-2">
-                                    <div class="fw-bold text-black pb-2">PHP Codeigniter & Bootstrap : Aplikasi Klinik</div>
+                                    <div class="fw-bold text-black pb-2">PHP Codeigniter & Bootstrap : Aplikasi Klinik
+                                    </div>
                                     <div class="text-black pb-2">Rp 250.000</div>
                                     <div class="d-flex align-items-end">
                                         <div>
@@ -532,10 +500,10 @@
                                     <div class="scroll-element utama">
                                         <div class="bg-white rounded-4 p-4 my-3">
                                             <div class="fw-bold text-black fs-5">Lebih Cepat Dipelajari</div>
-                                            <div class="fw-light text-grey pt-2">Source code yang diberikan sangat lengkap dari step awal hingga akhir.</div>
+                                            <div class="fw-light text-grey pt-2">Source code yang diberikan sangat
+                                                lengkap dari step awal hingga akhir.</div>
                                             <div class="d-flex align-items-center pt-3">
-                                                <img src="assets/img/avatars/1.webp"
-                                                    class="img-fluid rounded-circle">
+                                                <img src="assets/img/avatars/1.webp" class="img-fluid rounded-circle">
                                                 <div class="ps-2">
                                                     <div class="fw-bold text-black" style="font-size: 14px;">Rinny
                                                     </div>
@@ -546,10 +514,10 @@
                                         </div>
                                         <div class="bg-white rounded-4 p-4 my-3">
                                             <div class="fw-bold text-black fs-5">Tips Sangat Membantu</div>
-                                            <div class="fw-light text-grey pt-2">Tugas sekolah jadi terasa tidak terlalu sulit jika dilihat dari tips yang diberikan.</div>
+                                            <div class="fw-light text-grey pt-2">Tugas sekolah jadi terasa tidak
+                                                terlalu sulit jika dilihat dari tips yang diberikan.</div>
                                             <div class="d-flex align-items-center pt-3">
-                                                <img src="assets/img/avatars/2.webp"
-                                                    class="img-fluid rounded-circle">
+                                                <img src="assets/img/avatars/2.webp" class="img-fluid rounded-circle">
                                                 <div class="ps-2">
                                                     <div class="fw-bold text-black" style="font-size: 14px;">Andrew
                                                     </div>
@@ -560,10 +528,10 @@
                                         </div>
                                         <div class="bg-white rounded-4 p-4 my-3">
                                             <div class="fw-bold text-black fs-5">Recomended</div>
-                                            <div class="fw-light text-grey pt-2">Jadi tidak takut untuk merekomendasikan kepada teman-teman yang membutuhkan.</div>
+                                            <div class="fw-light text-grey pt-2">Jadi tidak takut untuk
+                                                merekomendasikan kepada teman-teman yang membutuhkan.</div>
                                             <div class="d-flex align-items-center pt-3">
-                                                <img src="assets/img/avatars/3.webp"
-                                                    class="img-fluid rounded-circle">
+                                                <img src="assets/img/avatars/3.webp" class="img-fluid rounded-circle">
                                                 <div class="ps-2">
                                                     <div class="fw-bold text-black" style="font-size: 14px;">Judi
                                                     </div>
@@ -577,8 +545,7 @@
                                             <div class="fw-light text-grey pt-2">Bergabung bersama kami untuk menemukan
                                                 solusi dari permasalahan sistem anda.</div>
                                             <div class="d-flex align-items-center pt-3">
-                                                <img src="assets/img/avatars/4.webp"
-                                                    class="img-fluid rounded-circle">
+                                                <img src="assets/img/avatars/4.webp" class="img-fluid rounded-circle">
                                                 <div class="ps-2">
                                                     <div class="fw-bold text-black" style="font-size: 14px;">Ronald
                                                     </div>
@@ -598,8 +565,7 @@
                                             <div class="fw-light text-grey pt-2">Bergabung bersama kami untuk menemukan
                                                 solusi dari permasalahan sistem anda.</div>
                                             <div class="d-flex align-items-center pt-3">
-                                                <img src="assets/img/avatars/3.webp"
-                                                    class="img-fluid rounded-circle">
+                                                <img src="assets/img/avatars/3.webp" class="img-fluid rounded-circle">
                                                 <div class="ps-2">
                                                     <div class="fw-bold text-black" style="font-size: 14px;">Alex
                                                     </div>
@@ -610,10 +576,10 @@
                                         </div>
                                         <div class="bg-white rounded-4 p-4 my-3">
                                             <div class="fw-bold text-black fs-5">Mudah Dipahami</div>
-                                            <div class="fw-light text-grey pt-2">Sangat cocok untuk orang awam seperti saya mempelajari ini dari awal.</div>
+                                            <div class="fw-light text-grey pt-2">Sangat cocok untuk orang awam seperti
+                                                saya mempelajari ini dari awal.</div>
                                             <div class="d-flex align-items-center pt-3">
-                                                <img src="assets/img/avatars/5.webp"
-                                                    class="img-fluid rounded-circle">
+                                                <img src="assets/img/avatars/5.webp" class="img-fluid rounded-circle">
                                                 <div class="ps-2">
                                                     <div class="fw-bold text-black" style="font-size: 14px;">Skidrow
                                                     </div>
@@ -624,10 +590,10 @@
                                         </div>
                                         <div class="bg-white rounded-4 p-4 my-3">
                                             <div class="fw-bold text-black fs-5">Tidak Sulit Untuk Diikuti</div>
-                                            <div class="fw-light text-grey pt-2">Pembelajaran cocok untuk pemula dengan materi yang sangat bagus.</div>
+                                            <div class="fw-light text-grey pt-2">Pembelajaran cocok untuk pemula dengan
+                                                materi yang sangat bagus.</div>
                                             <div class="d-flex align-items-center pt-3">
-                                                <img src="assets/img/avatars/1.webp"
-                                                    class="img-fluid rounded-circle">
+                                                <img src="assets/img/avatars/1.webp" class="img-fluid rounded-circle">
                                                 <div class="ps-2">
                                                     <div class="fw-bold text-black" style="font-size: 14px;">Brew
                                                     </div>
@@ -638,10 +604,10 @@
                                         </div>
                                         <div class="bg-white rounded-4 p-4 my-3">
                                             <div class="fw-bold text-black fs-5">Materi Update</div>
-                                            <div class="fw-light text-grey pt-2">Materi yang disediakan merupakan materi yang relate dengan pembelajaran saat ini.</div>
+                                            <div class="fw-light text-grey pt-2">Materi yang disediakan merupakan
+                                                materi yang relate dengan pembelajaran saat ini.</div>
                                             <div class="d-flex align-items-center pt-3">
-                                                <img src="assets/img/avatars/2.webp"
-                                                    class="img-fluid rounded-circle">
+                                                <img src="assets/img/avatars/2.webp" class="img-fluid rounded-circle">
                                                 <div class="ps-2">
                                                     <div class="fw-bold text-black" style="font-size: 14px;">Hans
                                                     </div>
@@ -671,8 +637,7 @@
                 <div class="row gx-4 pt-4">
                     <div class="col">
                         <div class="p-4">
-                            <img src="assets/img/avatars/tim1.png"
-                                class="img-fluid rounded-circle">
+                            <img src="assets/img/avatars/tim1.png" class="img-fluid rounded-circle">
                             <div class="pt-3">
                                 <div class="fw-bold fs-3 text-black">T.A.P</div>
                                 <div class="fw-light text-grey">Chief Operating Officer</div>
@@ -681,8 +646,7 @@
                     </div>
                     <div class="col">
                         <div class="p-4">
-                            <img src="https://via.placeholder.com/150x150.png?text=150x150"
-                                class="img-fluid rounded-circle">
+                            <img src="assets/img/avatars/Web edi2.jpg" class="img-fluid rounded-circle">
                             <div class="pt-3">
                                 <div class="fw-bold fs-3 text-black">ED</div>
                                 <div class="fw-light text-grey">Chief Technology Officer</div>
@@ -691,20 +655,18 @@
                     </div>
                     <div class="col">
                         <div class="p-4">
-                            <img src="https://via.placeholder.com/150x150.png?text=150x150"
-                                class="img-fluid rounded-circle">
+                            <img src="assets/img/avatars/jajik2.jpg" class="img-fluid rounded-circle">
                             <div class="pt-3">
-                                <div class="fw-bold fs-3 text-black">BOS</div>
+                                <div class="fw-bold fs-3 text-black">JAJIK</div>
                                 <div class="fw-light text-grey">Chief Financial Officer</div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="p-4">
-                            <img src="https://via.placeholder.com/150x150.png?text=150x150"
-                                class="img-fluid rounded-circle">
+                            <img src="assets/img/avatars/ibel2.jpg" class="img-fluid rounded-circle">
                             <div class="pt-3">
-                                <div class="fw-bold fs-3 text-black">IBEL</div>
+                                <div class="fw-bold fs-3 text-black">RYAN</div>
                                 <div class="fw-light text-grey">Chief Marketing Officer</div>
                             </div>
                         </div>
@@ -825,7 +787,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="text-primary">Find Information</div>
-                        <div class="text-black fs-2 fw-bold">Temukan Infromasi Seputar Pemrograman</div>
+                        <div class="text-black fs-2 fw-bold">Temukan Infromasi Seputar Pem</div>
                     </div>
                 </div>
                 <div class="row pt-3 xscroll">

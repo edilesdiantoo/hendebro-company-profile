@@ -7,6 +7,7 @@
             <th>Category</th>
             <th>Gambar</th>
             <th>Hit</th>
+            <th>keterangan</th>
             <th>Action</th>
         </tr>
     </thead>
@@ -20,9 +21,10 @@
                 <td>{{ $blog->menu_name }}</td>
                 <td>{{ $blog->category_name }}</td>
                 <td>
-                    {{-- <img src="{{ asset('storage/' . $blog->image) }}" alt=""> --}}
+                    <img src="{{ asset('storage/' . $blog->image) }}" alt="">
                 </td>
                 <td>{{ $blog->hit }}</td>
+                <td>{{ $blog->keterangan }}</td>
                 <td>
                     <a href="#" onclick="editBlog({{ $blog->id }})">
                         <i class='bx bx-edit-alt'></i>

@@ -17,6 +17,7 @@ return array(
     'App\\Http\\Controllers\\MNGContentController' => $baseDir . '/app/Http/Controllers/MNGContentController.php',
     'App\\Http\\Controllers\\MasterController' => $baseDir . '/app/Http/Controllers/MasterController.php',
     'App\\Http\\Controllers\\MenuController' => $baseDir . '/app/Http/Controllers/MenuController.php',
+    'App\\Http\\Controllers\\SourceCodeController' => $baseDir . '/app/Http/Controllers/SourceCodeController.php',
     'App\\Http\\Controllers\\User' => $baseDir . '/app/Http/Controllers/User.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
