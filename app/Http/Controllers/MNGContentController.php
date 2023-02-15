@@ -123,9 +123,10 @@ class MNGContentController extends Controller
             [
                 'judul'       => 'required',
                 'category_id' => 'required',
-                'menu_id'      => 'required',
+                'menu_id'     => 'required',
                 'hit'         => 'required',
-                'image'      => 'image|file|max:10000',
+                'keterangan'  => 'required',
+                'image'       => 'image|file|max:10000',
             ]
         );
 
@@ -180,7 +181,8 @@ class MNGContentController extends Controller
                 'category_id' => 'required',
                 'hdr_id'      => 'required',
                 'hit'         => 'required',
-                'image'      => 'image|file|max:10000',
+                'keterangan'  => 'required',
+                'image'       => 'image|file|max:10000',
             ];
 
         $validatedData = $request->validate($editBlog);
@@ -254,8 +256,40 @@ class MNGContentController extends Controller
     {
         $getCategoty = Category::all();
         $getScode = SourceCode::findOrFail($id);
-        $getMenuHdr = Hdr::all();
+        $getMenu = Menu::all();
 
-        return view('mngContent.modal.editScode', compact('getScode', 'getCategoty', 'getMenuHdr'))->render();
+        return view('mngContent.modal.editScode', compact('getScode', 'getCategoty', 'getMenu'))->render();
+    }
+
+    public function simpanScodeEdit(Request $request)
+    {
+        $editScode =
+            [
+                'judul'       => 'required',
+                'sub_judul'   => 'required',
+                'category_id' => 'required',
+                'menu_id'     => 'required',
+                'keterangan'  => 'required',
+                'image'       => 'image|file|max:10000',
+            ];
+
+        $validatedData = $request->validate($editScode);
+
+        if ($request->file('image')) {
+
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+
+            $validatedData['image'] = $request->file('image')->store('post-blog');
+        }
+
+        // dd($validatedData);
+
+        $blogSaveEdit = SourceCode::where('id', $request->id)
+            ->update($validatedData);
+        return Response()->json($blogSaveEdit);
+
+        // return redirect('/dashboard/posts')->with('success', 'New post has been added!');
     }
 }

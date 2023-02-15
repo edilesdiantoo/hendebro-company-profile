@@ -32,6 +32,12 @@
         </select>
     </div>
 </div>
+<div class="row">
+    <div class="col mb-3">
+        <label for="keterangan" class="form-label">Keterangan</label>
+        <input type="text" id="keterangan" name="keterangan" class="form-control" placeholder="Keterangan" />
+    </div>
+</div>
 <div class="mb-3">
     <img class="img-preview img-fluid mb-3 col-sm-5">
     <input class="form-control @error('image') is-invalid 

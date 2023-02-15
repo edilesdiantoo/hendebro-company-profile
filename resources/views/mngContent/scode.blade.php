@@ -157,7 +157,7 @@
             $('#upload_form_edit').on('submit', function(event) {
                 event.preventDefault();
                 $.ajax({
-                    url: "{{ url('simpanBlogEdit') }}",
+                    url: "{{ url('simpanScodeEdit') }}",
                     method: "POST",
                     data: new FormData(this),
                     dataType: 'JSON',
