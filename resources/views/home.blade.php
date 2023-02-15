@@ -351,37 +351,37 @@
                 <div class="d-flex justify-content-between rtol">
                     <div class="bg-teal rounded-4 p-4">
                         <div class="d-flex align-items-center">
-                            <img src="assets/img/laravel.png" class="img-fluid rounded-4">
+                            <img src="assets/img/node.png" class="img-fluid rounded-4">
                             <div class="ps-2">
-                                <div class="fw-bold text-black">Laravel</div>
-                                <div class="fw-light text-grey">Back-End Development</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-teal rounded-4 p-4">
-                        <div class="d-flex align-items-center">
-                            <img src="assets/img/codeigniter.png" class="img-fluid rounded-4">
-                            <div class="ps-2">
-                                <div class="fw-bold text-black">Codeigniter</div>
-                                <div class="fw-light text-grey">Back-End Development</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-teal rounded-4 p-4">
-                        <div class="d-flex align-items-center">
-                            <img src="assets/img/html.png" class="img-fluid rounded-4">
-                            <div class="ps-2">
-                                <div class="fw-bold text-black">HTML</div>
+                                <div class="fw-bold text-black">Node JS</div>
                                 <div class="fw-light text-grey">Front-End Development</div>
                             </div>
                         </div>
                     </div>
                     <div class="bg-teal rounded-4 p-4">
                         <div class="d-flex align-items-center">
-                            <img src="assets/img/js.png" class="img-fluid rounded-4">
+                            <img src="assets/img/figma.png" class="img-fluid rounded-4">
                             <div class="ps-2">
-                                <div class="fw-bold text-black">Javascript</div>
+                                <div class="fw-bold text-black">Figma</div>
+                                <div class="fw-light text-grey">UI/UX</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-teal rounded-4 p-4">
+                        <div class="d-flex align-items-center">
+                            <img src="assets/img/bootstrap.png" class="img-fluid rounded-4">
+                            <div class="ps-2">
+                                <div class="fw-bold text-black">Bootstrap</div>
                                 <div class="fw-light text-grey">Front-End Development</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-teal rounded-4 p-4">
+                        <div class="d-flex align-items-center">
+                            <img src="assets/img/mysql.png" class="img-fluid rounded-4">
+                            <div class="ps-2">
+                                <div class="fw-bold text-black">MySql</div>
+                                <div class="fw-light text-grey">Database</div>
                             </div>
                         </div>
                     </div>
@@ -389,37 +389,37 @@
                 <div class="d-flex justify-content-between rtol rtol2">
                     <div class="bg-teal rounded-4 p-4">
                         <div class="d-flex align-items-center">
-                            <img src="assets/img/laravel.png" class="img-fluid rounded-4">
+                            <img src="assets/img/node.png" class="img-fluid rounded-4">
                             <div class="ps-2">
-                                <div class="fw-bold text-black">Laravel</div>
-                                <div class="fw-light text-grey">Back-End Development</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-teal rounded-4 p-4">
-                        <div class="d-flex align-items-center">
-                            <img src="assets/img/codeigniter.png" class="img-fluid rounded-4">
-                            <div class="ps-2">
-                                <div class="fw-bold text-black">Codeigniter</div>
-                                <div class="fw-light text-grey">Back-End Development</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-teal rounded-4 p-4">
-                        <div class="d-flex align-items-center">
-                            <img src="assets/img/html.png" class="img-fluid rounded-4">
-                            <div class="ps-2">
-                                <div class="fw-bold text-black">HTML</div>
+                                <div class="fw-bold text-black">Node JS</div>
                                 <div class="fw-light text-grey">Front-End Development</div>
                             </div>
                         </div>
                     </div>
                     <div class="bg-teal rounded-4 p-4">
                         <div class="d-flex align-items-center">
-                            <img src="assets/img/js.png" class="img-fluid rounded-4">
+                            <img src="assets/img/figma.png" class="img-fluid rounded-4">
                             <div class="ps-2">
-                                <div class="fw-bold text-black">Javascript</div>
+                                <div class="fw-bold text-black">Figma</div>
+                                <div class="fw-light text-grey">UI/UX</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-teal rounded-4 p-4">
+                        <div class="d-flex align-items-center">
+                            <img src="assets/img/bootstrap.png" class="img-fluid rounded-4">
+                            <div class="ps-2">
+                                <div class="fw-bold text-black">Bootstrap</div>
                                 <div class="fw-light text-grey">Front-End Development</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-teal rounded-4 p-4">
+                        <div class="d-flex align-items-center">
+                            <img src="assets/img/mysql.png" class="img-fluid rounded-4">
+                            <div class="ps-2">
+                                <div class="fw-bold text-black">MySql</div>
+                                <div class="fw-light text-grey">Database</div>
                             </div>
                         </div>
                     </div>
@@ -832,7 +832,7 @@
                     <div class="col item2">
                         <div class="bg-white rounded-4 p-1">
                             <a href="blog.html" class="text-decoration-none">
-                                <img src="https://via.placeholder.com/500x300.png?text=500x300"
+                                <img src="assets/img/tips1.png"
                                     class="img-fluid rounded-4">
                                 <div class="p-2">
                                     <div class="fw-bold text-black">UI / UX : Menggunakan Figma Sebagai Tools Utama
@@ -846,13 +846,13 @@
                     <div class="col item2">
                         <div class="bg-white rounded-4 p-1">
                             <a href="blog.html" class="text-decoration-none">
-                                <img src="https://via.placeholder.com/500x300.png?text=500x300"
+                                <img src="assets/img/tips2.png"
                                     class="img-fluid rounded-4">
                                 <div class="p-2">
                                     <div class="fw-bold text-black">Laravel Tutorial : Cara membuat model pada blade
                                     </div>
                                     <div class="fw-light text-grey">Hello people spirit of learning! Dalam flutter
-                                        terdapat widget elevated button yang</div>
+                                        terdapat widget elevated button yang...</div>
                                 </div>
                             </a>
                         </div>
@@ -860,12 +860,12 @@
                     <div class="col item2">
                         <div class="bg-white rounded-4 p-1">
                             <a href="blog.html" class="text-decoration-none">
-                                <img src="https://via.placeholder.com/500x300.png?text=500x300"
+                                <img src="assets/img/tips3.png"
                                     class="img-fluid rounded-4">
                                 <div class="p-2">
                                     <div class="fw-bold text-black">HTML Tutorial : Mahir Menggunakan Tag HTML</div>
                                     <div class="fw-light text-grey">Hello people spirit of learning! Dalam flutter
-                                        terdapat widget elevated button yang</div>
+                                        terdapat widget elevated button yang...</div>
                                 </div>
                             </a>
                         </div>
@@ -879,14 +879,14 @@
             <div class="row">
                 <div class="col">
                     <div class="d-flex align-items-center">
-                        <img src="assets/img/icon/chat.png">
+                        <img src="assets/img/icon/chat.png" class="img-fluid">
                         <div class="ms-3">
                             <div class="text-black fw-bold fs-5">Need Answer?</div>
                             <div class="fw-light">Hubungi kami</div>
                         </div>
                         <div class="ms-auto">
                             <a href="https://api.whatsapp.com/send/?phone=6281211403600&text=Saya%20ingin%20bertanya%20seputar%20layanan%20yang%20diberikan%20oleh%20hendebro"
-                                class="rounded-4 px-4 py-2 bg-teal">Chat</a>
+                                class="rounded-4 px-4 py-2 bg-teal text-decoration-none text-black">Chat</a>
                         </div>
                     </div>
                 </div>
@@ -906,7 +906,7 @@
                     <div class="col item2">
                         <div class="bg-white rounded-4 p-1">
                             <a href="sourcecode.html" class="text-decoration-none">
-                                <img src="https://via.placeholder.com/500x300.png?text=500x300"
+                                <img src="assets/img/kelas2.png"
                                     class="img-fluid rounded-4">
                                 <div class="p-2">
                                     <div class="fw-bold text-black pb-2">PHP Codeigniter 5 & Bootstrap : E-Commerce
@@ -931,7 +931,7 @@
                     <div class="col item2">
                         <div class="bg-white rounded-4 p-1">
                             <a href="sourcecode.html" class="text-decoration-none">
-                                <img src="https://via.placeholder.com/500x300.png?text=500x300"
+                                <img src="assets/img/kelas3.png"
                                     class="img-fluid rounded-4">
                                 <div class="p-2">
                                     <div class="fw-bold text-black pb-2">PHP Laravel8 & Bootstrap : Aplikasi Pemesanan
@@ -954,7 +954,7 @@
                     <div class="col item2">
                         <div class="bg-white rounded-4 p-1">
                             <a href="sourcecode.html" class="text-decoration-none">
-                                <img src="https://via.placeholder.com/500x300.png?text=500x300"
+                                <img src="assets/img/kelas1.png"
                                     class="img-fluid rounded-4">
                                 <div class="p-2">
                                     <div class="fw-bold text-black pb-2">PHP Native & Bootstrap : Antrian Rumah Sakit
@@ -972,6 +972,59 @@
                                     </div>
                                 </div>
                             </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-4">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <div class="text-black fs-1 fw-bold">OUR TEAM</div>
+                        <div class="text-grey">Kami adalah tim yang akan menjadi solusi permasalahan sistem anda</div>
+                    </div>
+                </div>
+                <div class="row gx-4 pt-4">
+                    <div class="col">
+                        <div class="p-4">
+                            <img src="assets/img/avatars/tim1.png"
+                                class="img-fluid rounded-circle">
+                            <div class="pt-3">
+                                <div class="fw-bold fs-3 text-black">T.A.P</div>
+                                <div class="fw-light text-grey">Chief Operating Officer</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-4">
+                            <img src="https://via.placeholder.com/150x150.png?text=150x150"
+                                class="img-fluid rounded-circle">
+                            <div class="pt-3">
+                                <div class="fw-bold fs-3 text-black">ED</div>
+                                <div class="fw-light text-grey">Chief Technology Officer</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-4">
+                            <img src="https://via.placeholder.com/150x150.png?text=150x150"
+                                class="img-fluid rounded-circle">
+                            <div class="pt-3">
+                                <div class="fw-bold fs-3 text-black">BOS</div>
+                                <div class="fw-light text-grey">Chief Financial Officer</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-4">
+                            <img src="https://via.placeholder.com/150x150.png?text=150x150"
+                                class="img-fluid rounded-circle">
+                            <div class="pt-3">
+                                <div class="fw-bold fs-3 text-black">IBEL</div>
+                                <div class="fw-light text-grey">Chief Marketing Officer</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -999,45 +1052,45 @@
                     <div class="row pt-3">
                         <div class="col">
                             <div class="fw-semibold text-white pb-2">Source Code</div>
-                            <div><a class="text-white fw-light pb-1" href="sourcecode.html">Sistem Informasi</a></div>
-                            <div><a class="text-white fw-light pb-1" href="sourcecode.html">Landing Page</a></div>
-                            <div><a class="text-white fw-light pb-1" href="sourcecode.html">Point Of Sales (POS)</a>
+                            <div><a class="text-decoration-none text-white fw-light pb-1" href="sourcecode.html">Sistem Informasi</a></div>
+                            <div><a class="text-decoration-none text-white fw-light pb-1" href="sourcecode.html">Landing Page</a></div>
+                            <div><a class="text-decoration-none text-white fw-light pb-1" href="sourcecode.html">Point Of Sales (POS)</a>
                             </div>
-                            <div><a class="text-white fw-light pb-1" href="sourcecode.html">Company Profile</a></div>
-                            <div><a class="text-white fw-light pb-1" href="sourcecode.html">Sistem Pakar</a></div>
+                            <div><a class="text-decoration-none text-white fw-light pb-1" href="sourcecode.html">Company Profile</a></div>
+                            <div><a class="text-decoration-none text-white fw-light pb-1" href="sourcecode.html">Sistem Pakar</a></div>
                         </div>
                         <div class="col">
                             <div class="fw-semibold text-white pb-2">Product</div>
-                            <div><a class="text-white fw-light pb-1" href="product.html?pos">POSBro</a></div>
-                            <div><a class="text-white fw-light pb-1" href="product.html?gym">GYMBro</a></div>
-                            <div><a class="text-white fw-light pb-1" href="product.html?klinik">CLIMBro</a></div>
-                            <div><a class="text-white fw-light pb-1" href="product.html?qr">QRBro</a></div>
+                            <div><a class="text-decoration-none text-white fw-light pb-1" href="product.html?pos">POSBro</a></div>
+                            <div><a class="text-decoration-none text-white fw-light pb-1" href="product.html?gym">GYMBro</a></div>
+                            <div><a class="text-decoration-none text-white fw-light pb-1" href="product.html?klinik">CLIMBro</a></div>
+                            <div><a class="text-decoration-none text-white fw-light pb-1" href="product.html?qr">QRBro</a></div>
                         </div>
                     </div>
                     <div class="row pt-3">
                         <div class="col">
                             <div class="fw-semibold text-white pb-2">Hosting</div>
-                            <div><a class="text-white fw-light pb-1" href="hosting.html">Unlimited Hosting</a></div>
-                            <div><a class="text-white fw-light pb-1" href="hosting.html">Domain</a></div>
-                            <div><a class="text-white fw-light pb-1" href="hosting.html">Cloud Hosting</a></div>
-                            <div><a class="text-white fw-light pb-1" href="hosting.html">Company Profile</a></div>
-                            <div><a class="text-white fw-light pb-1" href="hosting.html">Sistem Pakar</a></div>
+                            <div><a class="text-decoration-none text-white fw-light pb-1" href="hosting.html">Unlimited Hosting</a></div>
+                            <div><a class="text-decoration-none text-white fw-light pb-1" href="hosting.html">Domain</a></div>
+                            <div><a class="text-decoration-none text-white fw-light pb-1" href="hosting.html">Cloud Hosting</a></div>
+                            <div><a class="text-decoration-none text-white fw-light pb-1" href="hosting.html">Company Profile</a></div>
+                            <div><a class="text-decoration-none text-white fw-light pb-1" href="hosting.html">Sistem Pakar</a></div>
                         </div>
                         <div class="col">
                             <div class="fw-semibold text-white pb-2">Company</div>
-                            <div><a class="text-white fw-light pb-1" href="about.html">About</a></div>
-                            <div><a class="text-white fw-light pb-1" href="contact.html">Contact</a></div>
-                            <div><a class="text-white fw-light pb-1"
+                            <div><a class="text-decoration-none text-white fw-light pb-1" href="about.html">About</a></div>
+                            <div><a class="text-decoration-none text-white fw-light pb-1" href="contact.html">Contact</a></div>
+                            <div><a class="text-decoration-none text-white fw-light pb-1"
                                     href="https://www.instagram.com/hendebro/">Instagram</a></div>
                         </div>
                     </div>
                     <div class="row pt-3">
                         <div class="col">
                             <div class="fw-semibold text-white pb-2">Office</div>
-                            <div class="text-white fw-light pb-1">CV. Hendebro</div>
-                            <div class="text-white fw-light pb-1">Jl. Premix (Komplek Rifaza 5) Blok D08</div>
-                            <div class="text-white fw-light pb-1">Jambi, Indonesia</div>
-                            <div class="text-white fw-light pb-1">+62 853 6899 9370</div>
+                            <div class="text-decoration-none text-white fw-light pb-1">CV. Hendebro</div>
+                            <div class="text-decoration-none text-white fw-light pb-1">Jl. Premix (Komplek Rifaza 5) Blok D08</div>
+                            <div class="text-decoration-none text-white fw-light pb-1">Jambi, Indonesia</div>
+                            <div class="text-decoration-none text-white fw-light pb-1">+62 853 6899 9370</div>
                         </div>
                     </div>
                 </div>
