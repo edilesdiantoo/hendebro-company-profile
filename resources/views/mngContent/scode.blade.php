@@ -177,11 +177,11 @@
             });
         });
 
-        function hapusBlog(id) {
+        function hapusScode(id) {
             $.ajax({
                 type: "get",
                 dataType: "json",
-                url: "{{ url('deleteBlog') }}/" + id,
+                url: "{{ url('deleteScode') }}/" + id,
                 success: function(data) {
                     $('.close').click();
                     showScode()

@@ -3,6 +3,8 @@
 use App\Models\Hdr;
 use App\Models\Blog;
 use App\Models\Menu;
+use App\Models\SourceCode;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
@@ -26,13 +28,18 @@ Route::get('/', function () {
     $active    = "home";
     $get_menu_landing = Menu::all();
     $getBlog = Blog::all();
+    $getSourceCode = DB::table('source_codes')
+        ->select('source_codes.*', 'categories.*')
+        ->leftJoin('categories', 'source_codes.category_id', 'categories.id')
+        ->get();
     // dd($get_menu_landing);
-    return view('home', compact('get_menu_landing', 'getBlog', 'active'));
+    return view('home', compact('get_menu_landing', 'getBlog', 'getSourceCode', 'active'));
 });
 
 Route::controller(LoginController::class)->group(function () {
     Route::get('/login', 'index')->name('login')->middleware('guest');
     Route::post('/login', 'authenticate');
+    Route::post('/logout', [LoginController::class, 'logout']);
 });
 
 Route::get('/foo', function () {
@@ -85,7 +92,7 @@ Route::controller(MNGContentController::class)->group(function () {
     Route::post('/simpanBlog', 'simpanBlog');
     Route::get('/fetch_blog', 'fetch_blog');
     Route::get('/editBlog/{id}', 'editBlog');
-    Route::get('/simpanBlogEdit/{id}', 'simpanBlogEdit');
+    Route::post('/simpanBlogEdit', 'simpanBlogEdit');
     Route::get('/deleteBlog/{id}', 'deleteBlog');
     Route::get('/getSearchMenu/{id}', 'getSearchMenu');
 
@@ -93,10 +100,10 @@ Route::controller(MNGContentController::class)->group(function () {
     Route::get('/MngContent/scode', 'scode');
     Route::get('/showScode', 'showScode');
     Route::get('/tambahScode', 'tambahScode');
-    Route::get('/editScode/{id}', 'editScode');
     Route::post('/simpanScode', 'simpanScode');
-    Route::get('/simpanScodeEdit/{id}', 'simpanScodeEdit');
+    Route::get('/editScode/{id}', 'editScode');
+    Route::post('/simpanScodeEdit', 'simpanScodeEdit');
+    Route::get('/deleteScode/{id}', 'deleteScode');
     // Route::get('/fetch_blog', 'fetch_blog');
-    // Route::get('/deleteBlog/{id}', 'deleteBlog');
     // Route::get('/getSearchMenu/{id}', 'getSearchMenu');
 });

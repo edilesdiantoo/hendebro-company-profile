@@ -3,6 +3,7 @@
         <label for="hdr_name" class="form-label">Judul</label>
         <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
         <input type="hidden" name="id" id="id" value="{{ $getBlog->id }}">
+        <input type="hidden" name="hit" id="hit" value="{{ $getBlog->hit }}">
         <input type="text" name="judul" id="judul" class="form-control @error('judul') is-invalid @enderror"
             placeholder="Nama Menu Header" value="{{ $getBlog->judul }}" />
         @error('judul')
@@ -25,12 +26,12 @@
 </div>
 <div class="row">
     <div class="col mb-3">
-        <label for="hdr_id" class="form-label">Header Menu</label>
-        <select class="form-select" id="hdr_id" name="hdr_id">
+        <label for="menu_id" class="form-label">Header Menu</label>
+        <select class="form-select" id="menu_id " name="menu_id ">
             <option value="">Pilih</option>
             @foreach ($getMenuHdr as $key => $hdr)
-                <option value="{{ $hdr->id }}" {{ $hdr->id == $getBlog->hdr_id ? 'selected' : '' }}>
-                    {{ $hdr->hdr_name }}</option>
+                <option value="1">
+                    {{ $hdr->name }}</option>
             @endforeach
         </select>
     </div>
@@ -38,7 +39,7 @@
 <div class="row">
     <div class="col mb-3">
         <label for="keterangan" class="form-label">Keterangan</label>
-        <input type="text" id="keterangan" class="form-control" placeholder="Keterangan"
+        <input type="text" id="keterangan" name="keterangan" class="form-control" placeholder="Keterangan"
             value="{{ $getBlog->keterangan }}" />
     </div>
 </div>

@@ -21,7 +21,9 @@
                 <td>{{ $blog->menu_name }}</td>
                 <td>{{ $blog->category_name }}</td>
                 <td>
-                    <img src="{{ asset('storage/' . $blog->image) }}" alt="">
+                    {{-- <img src="{{ asset('storage/' . $blog->image) }}" alt=""> --}}
+                    <img src="{{ URL::to('/storage') }}/post-blog/4NJMEJIevQU1aBGlILmJdkPYTIENhhzIYReianTB.png"
+                        alt="">
                 </td>
                 <td>{{ $blog->hit }}</td>
                 <td>{{ $blog->keterangan }}</td>
