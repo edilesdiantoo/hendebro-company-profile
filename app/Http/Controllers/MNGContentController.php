@@ -161,28 +161,23 @@ class MNGContentController extends Controller
     {
         $getCategoty = Category::all();
         $getBlog = Blog::findOrFail($id);
-        $getMenuHdr = Hdr::all();
+        $getMenuHdr = Menu::all();
+
+        // dd($getMenuHdr);
 
         return view('mngContent.modal.editBlog', compact('getBlog', 'getCategoty', 'getMenuHdr'))->render();
-    }
-
-    public function deleteBlog($id)
-    {
-        // $data = User::findOrFail($id);
-        $hapusBlog = Blog::destroy($id);
-        return response()->json($hapusBlog, 200);
     }
 
     public function simpanBlogEdit(Request $request)
     {
         $editBlog =
             [
-                'judul'       => 'required',
-                'category_id' => 'required',
-                'hdr_id'      => 'required',
-                'hit'         => 'required',
-                'keterangan'  => 'required',
-                'image'       => 'image|file|max:10000',
+                'judul'       => '',
+                'category_id' => '',
+                'menu_id'     => '',
+                'hit'         => '',
+                'keterangan'  => '',
+                'image'       => '',
             ];
 
         $validatedData = $request->validate($editBlog);
@@ -204,6 +199,14 @@ class MNGContentController extends Controller
 
         // return redirect('/dashboard/posts')->with('success', 'New post has been added!');
     }
+
+    public function deleteBlog($id)
+    {
+        // $data = User::findOrFail($id);
+        $hapusBlog = Blog::destroy($id);
+        return response()->json($hapusBlog, 200);
+    }
+
 
     public function scode()
     {
@@ -240,7 +243,7 @@ class MNGContentController extends Controller
                 'category_id' => 'required',
                 'menu_id'     => 'required',
                 'keterangan'  => 'required',
-                'image'       => 'image|file|max:10000',
+                'image'       => '',
             ]
         );
 
@@ -265,12 +268,12 @@ class MNGContentController extends Controller
     {
         $editScode =
             [
-                'judul'       => 'required',
-                'sub_judul'   => 'required',
-                'category_id' => 'required',
-                'menu_id'     => 'required',
-                'keterangan'  => 'required',
-                'image'       => 'image|file|max:10000',
+                'judul'       => '',
+                'sub_judul'   => '',
+                'category_id' => '',
+                'menu_id'     => '',
+                'keterangan'  => '',
+                'image'       => '',
             ];
 
         $validatedData = $request->validate($editScode);
@@ -291,5 +294,12 @@ class MNGContentController extends Controller
         return Response()->json($blogSaveEdit);
 
         // return redirect('/dashboard/posts')->with('success', 'New post has been added!');
+    }
+
+    public function deleteScode($id)
+    {
+        // $data = User::findOrFail($id);
+        $hapusScode = SourceCode::destroy($id);
+        return response()->json($hapusScode, 200);
     }
 }
